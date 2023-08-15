@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package DanielYevelkin.echo.v1;
+
+option go_package = "github.com/DanielYevelkin/clutch-custom-gateway/backend/api/echo/v1;echov1";
+
+import "google/api/annotations.proto";
+import "validate/validate.proto";
+
+import "api/v1/annotations.proto";
+
+service EchoAPI {
+  rpc SayHello(SayHelloRequest) returns (SayHelloResponse) {
+    option (google.api.http) = {
+      post : "/v1/echo/sayHello"
+      body : "*"
+    };
+    option (clutch.api.v1.action).type = READ;
+  }
+}
+
+message SayHelloRequest {
+  string name = 1 [(validate.rules).string = {min_bytes: 1}];
+}
+
+message SayHelloResponse {
+  string message = 1;
+}
