@@ -1,0 +1,57 @@
+{
+  "name": "@clutch-custom-gateway/frontend",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "build": "yarn compile && yarn register-workflows && react-scripts build",
+    "clean": "rm -rf build",
+    "compile": "lerna run compile --parallel",
+    "compile:watch": "lerna run compile:watch --parallel",
+    "eject": "react-scripts eject",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx .",
+    "lint:fix": "yarn run lint --fix",
+    "register-workflows": "npm explore @clutch-sh/tools -- yarn registerWorkflows $PWD/src",
+    "start": "yarn clean && yarn compile:watch & yarn register-workflows && FORCE_COLOR=true react-scripts start | cat",
+    "test": "lerna run test --stream --no-bail",
+    "test:coverage": "lerna run test:coverage --stream --no-bail",
+    "test:watch": "lerna run test:watch --parallel",
+    "upgrade": "yarn upgrade"
+  },
+  "dependencies": {
+    "protobufjs": "6.11.3"
+  },
+  "devDependencies": {
+    "lerna": "^4.0.0",
+    "@clutch-sh/ec2": "^2.0.0-beta",
+    "@clutch-custom-gateway/echo": "^0.0.0",
+    "@clutch-sh/core": "^2.0.0-beta",
+    "@clutch-sh/tools": "^2.0.0-beta",
+    "history": "^5.0.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "^5.0.1"
+  },
+  "resolutions": {
+    "@types/react": "^17.0.2"
+  },
+  "workspaces": [
+    "workflows/*"
+  ],
+  "proxy": "http://localhost:8080",
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "engines": {
+    "node": ">=16.0.0 <17",
+    "yarn": "^1.22.11"
+  }
+}
