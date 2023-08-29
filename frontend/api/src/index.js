@@ -9,105 +9,105 @@ const $util = $protobuf.util;
 // Exported root namespace
 const $root = $protobuf.roots["default"] || ($protobuf.roots["default"] = {});
 
-export const DanielYevelkin = $root.DanielYevelkin = (() => {
+export const clutch = $root.clutch = (() => {
 
     /**
-     * Namespace DanielYevelkin.
-     * @exports DanielYevelkin
+     * Namespace clutch.
+     * @exports clutch
      * @namespace
      */
-    const DanielYevelkin = {};
+    const clutch = {};
 
-    DanielYevelkin.echo = (function() {
+    clutch.amiibo = (function() {
 
         /**
-         * Namespace echo.
-         * @memberof DanielYevelkin
+         * Namespace amiibo.
+         * @memberof clutch
          * @namespace
          */
-        const echo = {};
+        const amiibo = {};
 
-        echo.v1 = (function() {
+        amiibo.v1 = (function() {
 
             /**
              * Namespace v1.
-             * @memberof DanielYevelkin.echo
+             * @memberof clutch.amiibo
              * @namespace
              */
             const v1 = {};
 
-            v1.EchoAPI = (function() {
+            v1.AmiiboAPI = (function() {
 
                 /**
-                 * Constructs a new EchoAPI service.
-                 * @memberof DanielYevelkin.echo.v1
-                 * @classdesc Represents an EchoAPI
+                 * Constructs a new AmiiboAPI service.
+                 * @memberof clutch.amiibo.v1
+                 * @classdesc Represents an AmiiboAPI
                  * @extends $protobuf.rpc.Service
                  * @constructor
                  * @param {$protobuf.RPCImpl} rpcImpl RPC implementation
                  * @param {boolean} [requestDelimited=false] Whether requests are length-delimited
                  * @param {boolean} [responseDelimited=false] Whether responses are length-delimited
                  */
-                function EchoAPI(rpcImpl, requestDelimited, responseDelimited) {
+                function AmiiboAPI(rpcImpl, requestDelimited, responseDelimited) {
                     $protobuf.rpc.Service.call(this, rpcImpl, requestDelimited, responseDelimited);
                 }
 
-                (EchoAPI.prototype = Object.create($protobuf.rpc.Service.prototype)).constructor = EchoAPI;
+                (AmiiboAPI.prototype = Object.create($protobuf.rpc.Service.prototype)).constructor = AmiiboAPI;
 
                 /**
-                 * Callback as used by {@link DanielYevelkin.echo.v1.EchoAPI#sayHello}.
-                 * @memberof DanielYevelkin.echo.v1.EchoAPI
-                 * @typedef SayHelloCallback
+                 * Callback as used by {@link clutch.amiibo.v1.AmiiboAPI#getAmiibo}.
+                 * @memberof clutch.amiibo.v1.AmiiboAPI
+                 * @typedef GetAmiiboCallback
                  * @type {function}
                  * @param {Error|null} error Error, if any
-                 * @param {DanielYevelkin.echo.v1.SayHelloResponse} [response] SayHelloResponse
+                 * @param {clutch.amiibo.v1.GetAmiiboResponse} [response] GetAmiiboResponse
                  */
 
                 /**
-                 * Calls SayHello.
-                 * @function sayHello
-                 * @memberof DanielYevelkin.echo.v1.EchoAPI
+                 * Calls GetAmiibo.
+                 * @function getAmiibo
+                 * @memberof clutch.amiibo.v1.AmiiboAPI
                  * @instance
-                 * @param {DanielYevelkin.echo.v1.ISayHelloRequest} request SayHelloRequest message or plain object
-                 * @param {DanielYevelkin.echo.v1.EchoAPI.SayHelloCallback} callback Node-style callback called with the error, if any, and SayHelloResponse
+                 * @param {clutch.amiibo.v1.IGetAmiiboRequest} request GetAmiiboRequest message or plain object
+                 * @param {clutch.amiibo.v1.AmiiboAPI.GetAmiiboCallback} callback Node-style callback called with the error, if any, and GetAmiiboResponse
                  * @returns {undefined}
                  * @variation 1
                  */
-                Object.defineProperty(EchoAPI.prototype.sayHello = function sayHello(request, callback) {
-                    return this.rpcCall(sayHello, $root.DanielYevelkin.echo.v1.SayHelloRequest, $root.DanielYevelkin.echo.v1.SayHelloResponse, request, callback);
-                }, "name", { value: "SayHello" });
+                Object.defineProperty(AmiiboAPI.prototype.getAmiibo = function getAmiibo(request, callback) {
+                    return this.rpcCall(getAmiibo, $root.clutch.amiibo.v1.GetAmiiboRequest, $root.clutch.amiibo.v1.GetAmiiboResponse, request, callback);
+                }, "name", { value: "GetAmiibo" });
 
                 /**
-                 * Calls SayHello.
-                 * @function sayHello
-                 * @memberof DanielYevelkin.echo.v1.EchoAPI
+                 * Calls GetAmiibo.
+                 * @function getAmiibo
+                 * @memberof clutch.amiibo.v1.AmiiboAPI
                  * @instance
-                 * @param {DanielYevelkin.echo.v1.ISayHelloRequest} request SayHelloRequest message or plain object
-                 * @returns {Promise<DanielYevelkin.echo.v1.SayHelloResponse>} Promise
+                 * @param {clutch.amiibo.v1.IGetAmiiboRequest} request GetAmiiboRequest message or plain object
+                 * @returns {Promise<clutch.amiibo.v1.GetAmiiboResponse>} Promise
                  * @variation 2
                  */
 
-                return EchoAPI;
+                return AmiiboAPI;
             })();
 
-            v1.SayHelloRequest = (function() {
+            v1.GetAmiiboRequest = (function() {
 
                 /**
-                 * Properties of a SayHelloRequest.
-                 * @memberof DanielYevelkin.echo.v1
-                 * @interface ISayHelloRequest
-                 * @property {string|null} [name] SayHelloRequest name
+                 * Properties of a GetAmiiboRequest.
+                 * @memberof clutch.amiibo.v1
+                 * @interface IGetAmiiboRequest
+                 * @property {string|null} [name] GetAmiiboRequest name
                  */
 
                 /**
-                 * Constructs a new SayHelloRequest.
-                 * @memberof DanielYevelkin.echo.v1
-                 * @classdesc Represents a SayHelloRequest.
-                 * @implements ISayHelloRequest
+                 * Constructs a new GetAmiiboRequest.
+                 * @memberof clutch.amiibo.v1
+                 * @classdesc Represents a GetAmiiboRequest.
+                 * @implements IGetAmiiboRequest
                  * @constructor
-                 * @param {DanielYevelkin.echo.v1.ISayHelloRequest=} [properties] Properties to set
+                 * @param {clutch.amiibo.v1.IGetAmiiboRequest=} [properties] Properties to set
                  */
-                function SayHelloRequest(properties) {
+                function GetAmiiboRequest(properties) {
                     if (properties)
                         for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
                             if (properties[keys[i]] != null)
@@ -115,22 +115,22 @@ export const DanielYevelkin = $root.DanielYevelkin = (() => {
                 }
 
                 /**
-                 * SayHelloRequest name.
+                 * GetAmiiboRequest name.
                  * @member {string} name
-                 * @memberof DanielYevelkin.echo.v1.SayHelloRequest
+                 * @memberof clutch.amiibo.v1.GetAmiiboRequest
                  * @instance
                  */
-                SayHelloRequest.prototype.name = "";
+                GetAmiiboRequest.prototype.name = "";
 
                 /**
-                 * Verifies a SayHelloRequest message.
+                 * Verifies a GetAmiiboRequest message.
                  * @function verify
-                 * @memberof DanielYevelkin.echo.v1.SayHelloRequest
+                 * @memberof clutch.amiibo.v1.GetAmiiboRequest
                  * @static
                  * @param {Object.<string,*>} message Plain object to verify
                  * @returns {string|null} `null` if valid, otherwise the reason why it is not
                  */
-                SayHelloRequest.verify = function verify(message) {
+                GetAmiiboRequest.verify = function verify(message) {
                     if (typeof message !== "object" || message === null)
                         return "object expected";
                     if (message.name != null && message.hasOwnProperty("name"))
@@ -140,32 +140,32 @@ export const DanielYevelkin = $root.DanielYevelkin = (() => {
                 };
 
                 /**
-                 * Creates a SayHelloRequest message from a plain object. Also converts values to their respective internal types.
+                 * Creates a GetAmiiboRequest message from a plain object. Also converts values to their respective internal types.
                  * @function fromObject
-                 * @memberof DanielYevelkin.echo.v1.SayHelloRequest
+                 * @memberof clutch.amiibo.v1.GetAmiiboRequest
                  * @static
                  * @param {Object.<string,*>} object Plain object
-                 * @returns {DanielYevelkin.echo.v1.SayHelloRequest} SayHelloRequest
+                 * @returns {clutch.amiibo.v1.GetAmiiboRequest} GetAmiiboRequest
                  */
-                SayHelloRequest.fromObject = function fromObject(object) {
-                    if (object instanceof $root.DanielYevelkin.echo.v1.SayHelloRequest)
+                GetAmiiboRequest.fromObject = function fromObject(object) {
+                    if (object instanceof $root.clutch.amiibo.v1.GetAmiiboRequest)
                         return object;
-                    let message = new $root.DanielYevelkin.echo.v1.SayHelloRequest();
+                    let message = new $root.clutch.amiibo.v1.GetAmiiboRequest();
                     if (object.name != null)
                         message.name = String(object.name);
                     return message;
                 };
 
                 /**
-                 * Creates a plain object from a SayHelloRequest message. Also converts values to other types if specified.
+                 * Creates a plain object from a GetAmiiboRequest message. Also converts values to other types if specified.
                  * @function toObject
-                 * @memberof DanielYevelkin.echo.v1.SayHelloRequest
+                 * @memberof clutch.amiibo.v1.GetAmiiboRequest
                  * @static
-                 * @param {DanielYevelkin.echo.v1.SayHelloRequest} message SayHelloRequest
+                 * @param {clutch.amiibo.v1.GetAmiiboRequest} message GetAmiiboRequest
                  * @param {$protobuf.IConversionOptions} [options] Conversion options
                  * @returns {Object.<string,*>} Plain object
                  */
-                SayHelloRequest.toObject = function toObject(message, options) {
+                GetAmiiboRequest.toObject = function toObject(message, options) {
                     if (!options)
                         options = {};
                     let object = {};
@@ -177,37 +177,38 @@ export const DanielYevelkin = $root.DanielYevelkin = (() => {
                 };
 
                 /**
-                 * Converts this SayHelloRequest to JSON.
+                 * Converts this GetAmiiboRequest to JSON.
                  * @function toJSON
-                 * @memberof DanielYevelkin.echo.v1.SayHelloRequest
+                 * @memberof clutch.amiibo.v1.GetAmiiboRequest
                  * @instance
                  * @returns {Object.<string,*>} JSON object
                  */
-                SayHelloRequest.prototype.toJSON = function toJSON() {
+                GetAmiiboRequest.prototype.toJSON = function toJSON() {
                     return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
                 };
 
-                return SayHelloRequest;
+                return GetAmiiboRequest;
             })();
 
-            v1.SayHelloResponse = (function() {
+            v1.GetAmiiboResponse = (function() {
 
                 /**
-                 * Properties of a SayHelloResponse.
-                 * @memberof DanielYevelkin.echo.v1
-                 * @interface ISayHelloResponse
-                 * @property {string|null} [message] SayHelloResponse message
+                 * Properties of a GetAmiiboResponse.
+                 * @memberof clutch.amiibo.v1
+                 * @interface IGetAmiiboResponse
+                 * @property {Array.<clutch.amiibo.v1.IAmiibo>|null} [amiibo] GetAmiiboResponse amiibo
                  */
 
                 /**
-                 * Constructs a new SayHelloResponse.
-                 * @memberof DanielYevelkin.echo.v1
-                 * @classdesc Represents a SayHelloResponse.
-                 * @implements ISayHelloResponse
+                 * Constructs a new GetAmiiboResponse.
+                 * @memberof clutch.amiibo.v1
+                 * @classdesc Represents a GetAmiiboResponse.
+                 * @implements IGetAmiiboResponse
                  * @constructor
-                 * @param {DanielYevelkin.echo.v1.ISayHelloResponse=} [properties] Properties to set
+                 * @param {clutch.amiibo.v1.IGetAmiiboResponse=} [properties] Properties to set
                  */
-                function SayHelloResponse(properties) {
+                function GetAmiiboResponse(properties) {
+                    this.amiibo = [];
                     if (properties)
                         for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
                             if (properties[keys[i]] != null)
@@ -215,88 +216,936 @@ export const DanielYevelkin = $root.DanielYevelkin = (() => {
                 }
 
                 /**
-                 * SayHelloResponse message.
-                 * @member {string} message
-                 * @memberof DanielYevelkin.echo.v1.SayHelloResponse
+                 * GetAmiiboResponse amiibo.
+                 * @member {Array.<clutch.amiibo.v1.IAmiibo>} amiibo
+                 * @memberof clutch.amiibo.v1.GetAmiiboResponse
                  * @instance
                  */
-                SayHelloResponse.prototype.message = "";
+                GetAmiiboResponse.prototype.amiibo = $util.emptyArray;
 
                 /**
-                 * Verifies a SayHelloResponse message.
+                 * Verifies a GetAmiiboResponse message.
                  * @function verify
-                 * @memberof DanielYevelkin.echo.v1.SayHelloResponse
+                 * @memberof clutch.amiibo.v1.GetAmiiboResponse
                  * @static
                  * @param {Object.<string,*>} message Plain object to verify
                  * @returns {string|null} `null` if valid, otherwise the reason why it is not
                  */
-                SayHelloResponse.verify = function verify(message) {
+                GetAmiiboResponse.verify = function verify(message) {
                     if (typeof message !== "object" || message === null)
                         return "object expected";
-                    if (message.message != null && message.hasOwnProperty("message"))
-                        if (!$util.isString(message.message))
-                            return "message: string expected";
+                    if (message.amiibo != null && message.hasOwnProperty("amiibo")) {
+                        if (!Array.isArray(message.amiibo))
+                            return "amiibo: array expected";
+                        for (let i = 0; i < message.amiibo.length; ++i) {
+                            let error = $root.clutch.amiibo.v1.Amiibo.verify(message.amiibo[i]);
+                            if (error)
+                                return "amiibo." + error;
+                        }
+                    }
                     return null;
                 };
 
                 /**
-                 * Creates a SayHelloResponse message from a plain object. Also converts values to their respective internal types.
+                 * Creates a GetAmiiboResponse message from a plain object. Also converts values to their respective internal types.
                  * @function fromObject
-                 * @memberof DanielYevelkin.echo.v1.SayHelloResponse
+                 * @memberof clutch.amiibo.v1.GetAmiiboResponse
                  * @static
                  * @param {Object.<string,*>} object Plain object
-                 * @returns {DanielYevelkin.echo.v1.SayHelloResponse} SayHelloResponse
+                 * @returns {clutch.amiibo.v1.GetAmiiboResponse} GetAmiiboResponse
                  */
-                SayHelloResponse.fromObject = function fromObject(object) {
-                    if (object instanceof $root.DanielYevelkin.echo.v1.SayHelloResponse)
+                GetAmiiboResponse.fromObject = function fromObject(object) {
+                    if (object instanceof $root.clutch.amiibo.v1.GetAmiiboResponse)
                         return object;
-                    let message = new $root.DanielYevelkin.echo.v1.SayHelloResponse();
-                    if (object.message != null)
-                        message.message = String(object.message);
+                    let message = new $root.clutch.amiibo.v1.GetAmiiboResponse();
+                    if (object.amiibo) {
+                        if (!Array.isArray(object.amiibo))
+                            throw TypeError(".clutch.amiibo.v1.GetAmiiboResponse.amiibo: array expected");
+                        message.amiibo = [];
+                        for (let i = 0; i < object.amiibo.length; ++i) {
+                            if (typeof object.amiibo[i] !== "object")
+                                throw TypeError(".clutch.amiibo.v1.GetAmiiboResponse.amiibo: object expected");
+                            message.amiibo[i] = $root.clutch.amiibo.v1.Amiibo.fromObject(object.amiibo[i]);
+                        }
+                    }
                     return message;
                 };
 
                 /**
-                 * Creates a plain object from a SayHelloResponse message. Also converts values to other types if specified.
+                 * Creates a plain object from a GetAmiiboResponse message. Also converts values to other types if specified.
                  * @function toObject
-                 * @memberof DanielYevelkin.echo.v1.SayHelloResponse
+                 * @memberof clutch.amiibo.v1.GetAmiiboResponse
                  * @static
-                 * @param {DanielYevelkin.echo.v1.SayHelloResponse} message SayHelloResponse
+                 * @param {clutch.amiibo.v1.GetAmiiboResponse} message GetAmiiboResponse
                  * @param {$protobuf.IConversionOptions} [options] Conversion options
                  * @returns {Object.<string,*>} Plain object
                  */
-                SayHelloResponse.toObject = function toObject(message, options) {
+                GetAmiiboResponse.toObject = function toObject(message, options) {
                     if (!options)
                         options = {};
                     let object = {};
-                    if (options.defaults)
-                        object.message = "";
-                    if (message.message != null && message.hasOwnProperty("message"))
-                        object.message = message.message;
+                    if (options.arrays || options.defaults)
+                        object.amiibo = [];
+                    if (message.amiibo && message.amiibo.length) {
+                        object.amiibo = [];
+                        for (let j = 0; j < message.amiibo.length; ++j)
+                            object.amiibo[j] = $root.clutch.amiibo.v1.Amiibo.toObject(message.amiibo[j], options);
+                    }
                     return object;
                 };
 
                 /**
-                 * Converts this SayHelloResponse to JSON.
+                 * Converts this GetAmiiboResponse to JSON.
                  * @function toJSON
-                 * @memberof DanielYevelkin.echo.v1.SayHelloResponse
+                 * @memberof clutch.amiibo.v1.GetAmiiboResponse
                  * @instance
                  * @returns {Object.<string,*>} JSON object
                  */
-                SayHelloResponse.prototype.toJSON = function toJSON() {
+                GetAmiiboResponse.prototype.toJSON = function toJSON() {
                     return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
                 };
 
-                return SayHelloResponse;
+                return GetAmiiboResponse;
+            })();
+
+            v1.Amiibo = (function() {
+
+                /**
+                 * Properties of an Amiibo.
+                 * @memberof clutch.amiibo.v1
+                 * @interface IAmiibo
+                 * @property {string|null} [character] Amiibo character
+                 * @property {string|null} [name] Amiibo name
+                 * @property {string|null} [amiiboSeries] Amiibo amiiboSeries
+                 * @property {string|null} [imageUrl] Amiibo imageUrl
+                 * @property {clutch.amiibo.v1.Amiibo.Type|null} [type] Amiibo type
+                 */
+
+                /**
+                 * Constructs a new Amiibo.
+                 * @memberof clutch.amiibo.v1
+                 * @classdesc Represents an Amiibo.
+                 * @implements IAmiibo
+                 * @constructor
+                 * @param {clutch.amiibo.v1.IAmiibo=} [properties] Properties to set
+                 */
+                function Amiibo(properties) {
+                    if (properties)
+                        for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+
+                /**
+                 * Amiibo character.
+                 * @member {string} character
+                 * @memberof clutch.amiibo.v1.Amiibo
+                 * @instance
+                 */
+                Amiibo.prototype.character = "";
+
+                /**
+                 * Amiibo name.
+                 * @member {string} name
+                 * @memberof clutch.amiibo.v1.Amiibo
+                 * @instance
+                 */
+                Amiibo.prototype.name = "";
+
+                /**
+                 * Amiibo amiiboSeries.
+                 * @member {string} amiiboSeries
+                 * @memberof clutch.amiibo.v1.Amiibo
+                 * @instance
+                 */
+                Amiibo.prototype.amiiboSeries = "";
+
+                /**
+                 * Amiibo imageUrl.
+                 * @member {string} imageUrl
+                 * @memberof clutch.amiibo.v1.Amiibo
+                 * @instance
+                 */
+                Amiibo.prototype.imageUrl = "";
+
+                /**
+                 * Amiibo type.
+                 * @member {clutch.amiibo.v1.Amiibo.Type} type
+                 * @memberof clutch.amiibo.v1.Amiibo
+                 * @instance
+                 */
+                Amiibo.prototype.type = 0;
+
+                /**
+                 * Verifies an Amiibo message.
+                 * @function verify
+                 * @memberof clutch.amiibo.v1.Amiibo
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                Amiibo.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    if (message.character != null && message.hasOwnProperty("character"))
+                        if (!$util.isString(message.character))
+                            return "character: string expected";
+                    if (message.name != null && message.hasOwnProperty("name"))
+                        if (!$util.isString(message.name))
+                            return "name: string expected";
+                    if (message.amiiboSeries != null && message.hasOwnProperty("amiiboSeries"))
+                        if (!$util.isString(message.amiiboSeries))
+                            return "amiiboSeries: string expected";
+                    if (message.imageUrl != null && message.hasOwnProperty("imageUrl"))
+                        if (!$util.isString(message.imageUrl))
+                            return "imageUrl: string expected";
+                    if (message.type != null && message.hasOwnProperty("type"))
+                        switch (message.type) {
+                        default:
+                            return "type: enum value expected";
+                        case 0:
+                        case 1:
+                        case 2:
+                        case 3:
+                            break;
+                        }
+                    return null;
+                };
+
+                /**
+                 * Creates an Amiibo message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof clutch.amiibo.v1.Amiibo
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {clutch.amiibo.v1.Amiibo} Amiibo
+                 */
+                Amiibo.fromObject = function fromObject(object) {
+                    if (object instanceof $root.clutch.amiibo.v1.Amiibo)
+                        return object;
+                    let message = new $root.clutch.amiibo.v1.Amiibo();
+                    if (object.character != null)
+                        message.character = String(object.character);
+                    if (object.name != null)
+                        message.name = String(object.name);
+                    if (object.amiiboSeries != null)
+                        message.amiiboSeries = String(object.amiiboSeries);
+                    if (object.imageUrl != null)
+                        message.imageUrl = String(object.imageUrl);
+                    switch (object.type) {
+                    case "UNSPECIFIED":
+                    case 0:
+                        message.type = 0;
+                        break;
+                    case "CARD":
+                    case 1:
+                        message.type = 1;
+                        break;
+                    case "FIGURE":
+                    case 2:
+                        message.type = 2;
+                        break;
+                    case "YARN":
+                    case 3:
+                        message.type = 3;
+                        break;
+                    }
+                    return message;
+                };
+
+                /**
+                 * Creates a plain object from an Amiibo message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof clutch.amiibo.v1.Amiibo
+                 * @static
+                 * @param {clutch.amiibo.v1.Amiibo} message Amiibo
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                Amiibo.toObject = function toObject(message, options) {
+                    if (!options)
+                        options = {};
+                    let object = {};
+                    if (options.defaults) {
+                        object.character = "";
+                        object.name = "";
+                        object.amiiboSeries = "";
+                        object.imageUrl = "";
+                        object.type = options.enums === String ? "UNSPECIFIED" : 0;
+                    }
+                    if (message.character != null && message.hasOwnProperty("character"))
+                        object.character = message.character;
+                    if (message.name != null && message.hasOwnProperty("name"))
+                        object.name = message.name;
+                    if (message.amiiboSeries != null && message.hasOwnProperty("amiiboSeries"))
+                        object.amiiboSeries = message.amiiboSeries;
+                    if (message.imageUrl != null && message.hasOwnProperty("imageUrl"))
+                        object.imageUrl = message.imageUrl;
+                    if (message.type != null && message.hasOwnProperty("type"))
+                        object.type = options.enums === String ? $root.clutch.amiibo.v1.Amiibo.Type[message.type] : message.type;
+                    return object;
+                };
+
+                /**
+                 * Converts this Amiibo to JSON.
+                 * @function toJSON
+                 * @memberof clutch.amiibo.v1.Amiibo
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                Amiibo.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+
+                /**
+                 * Type enum.
+                 * @name clutch.amiibo.v1.Amiibo.Type
+                 * @enum {number}
+                 * @property {number} UNSPECIFIED=0 UNSPECIFIED value
+                 * @property {number} CARD=1 CARD value
+                 * @property {number} FIGURE=2 FIGURE value
+                 * @property {number} YARN=3 YARN value
+                 */
+                Amiibo.Type = (function() {
+                    const valuesById = {}, values = Object.create(valuesById);
+                    values[valuesById[0] = "UNSPECIFIED"] = 0;
+                    values[valuesById[1] = "CARD"] = 1;
+                    values[valuesById[2] = "FIGURE"] = 2;
+                    values[valuesById[3] = "YARN"] = 3;
+                    return values;
+                })();
+
+                return Amiibo;
             })();
 
             return v1;
         })();
 
-        return echo;
+        return amiibo;
     })();
 
-    return DanielYevelkin;
+    clutch.api = (function() {
+
+        /**
+         * Namespace api.
+         * @memberof clutch
+         * @namespace
+         */
+        const api = {};
+
+        api.v1 = (function() {
+
+            /**
+             * Namespace v1.
+             * @memberof clutch.api
+             * @namespace
+             */
+            const v1 = {};
+
+            /**
+             * ActionType enum.
+             * @name clutch.api.v1.ActionType
+             * @enum {number}
+             * @property {number} UNSPECIFIED=0 UNSPECIFIED value
+             * @property {number} CREATE=1 CREATE value
+             * @property {number} READ=2 READ value
+             * @property {number} UPDATE=3 UPDATE value
+             * @property {number} DELETE=4 DELETE value
+             */
+            v1.ActionType = (function() {
+                const valuesById = {}, values = Object.create(valuesById);
+                values[valuesById[0] = "UNSPECIFIED"] = 0;
+                values[valuesById[1] = "CREATE"] = 1;
+                values[valuesById[2] = "READ"] = 2;
+                values[valuesById[3] = "UPDATE"] = 3;
+                values[valuesById[4] = "DELETE"] = 4;
+                return values;
+            })();
+
+            v1.Action = (function() {
+
+                /**
+                 * Properties of an Action.
+                 * @memberof clutch.api.v1
+                 * @interface IAction
+                 * @property {clutch.api.v1.ActionType|null} [type] Action type
+                 */
+
+                /**
+                 * Constructs a new Action.
+                 * @memberof clutch.api.v1
+                 * @classdesc Represents an Action.
+                 * @implements IAction
+                 * @constructor
+                 * @param {clutch.api.v1.IAction=} [properties] Properties to set
+                 */
+                function Action(properties) {
+                    if (properties)
+                        for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+
+                /**
+                 * Action type.
+                 * @member {clutch.api.v1.ActionType} type
+                 * @memberof clutch.api.v1.Action
+                 * @instance
+                 */
+                Action.prototype.type = 0;
+
+                /**
+                 * Verifies an Action message.
+                 * @function verify
+                 * @memberof clutch.api.v1.Action
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                Action.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    if (message.type != null && message.hasOwnProperty("type"))
+                        switch (message.type) {
+                        default:
+                            return "type: enum value expected";
+                        case 0:
+                        case 1:
+                        case 2:
+                        case 3:
+                        case 4:
+                            break;
+                        }
+                    return null;
+                };
+
+                /**
+                 * Creates an Action message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof clutch.api.v1.Action
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {clutch.api.v1.Action} Action
+                 */
+                Action.fromObject = function fromObject(object) {
+                    if (object instanceof $root.clutch.api.v1.Action)
+                        return object;
+                    let message = new $root.clutch.api.v1.Action();
+                    switch (object.type) {
+                    case "UNSPECIFIED":
+                    case 0:
+                        message.type = 0;
+                        break;
+                    case "CREATE":
+                    case 1:
+                        message.type = 1;
+                        break;
+                    case "READ":
+                    case 2:
+                        message.type = 2;
+                        break;
+                    case "UPDATE":
+                    case 3:
+                        message.type = 3;
+                        break;
+                    case "DELETE":
+                    case 4:
+                        message.type = 4;
+                        break;
+                    }
+                    return message;
+                };
+
+                /**
+                 * Creates a plain object from an Action message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof clutch.api.v1.Action
+                 * @static
+                 * @param {clutch.api.v1.Action} message Action
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                Action.toObject = function toObject(message, options) {
+                    if (!options)
+                        options = {};
+                    let object = {};
+                    if (options.defaults)
+                        object.type = options.enums === String ? "UNSPECIFIED" : 0;
+                    if (message.type != null && message.hasOwnProperty("type"))
+                        object.type = options.enums === String ? $root.clutch.api.v1.ActionType[message.type] : message.type;
+                    return object;
+                };
+
+                /**
+                 * Converts this Action to JSON.
+                 * @function toJSON
+                 * @memberof clutch.api.v1.Action
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                Action.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+
+                return Action;
+            })();
+
+            v1.Pattern = (function() {
+
+                /**
+                 * Properties of a Pattern.
+                 * @memberof clutch.api.v1
+                 * @interface IPattern
+                 * @property {string|null} [typeUrl] Pattern typeUrl
+                 * @property {string|null} [pattern] Pattern pattern
+                 */
+
+                /**
+                 * Constructs a new Pattern.
+                 * @memberof clutch.api.v1
+                 * @classdesc Represents a Pattern.
+                 * @implements IPattern
+                 * @constructor
+                 * @param {clutch.api.v1.IPattern=} [properties] Properties to set
+                 */
+                function Pattern(properties) {
+                    if (properties)
+                        for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+
+                /**
+                 * Pattern typeUrl.
+                 * @member {string} typeUrl
+                 * @memberof clutch.api.v1.Pattern
+                 * @instance
+                 */
+                Pattern.prototype.typeUrl = "";
+
+                /**
+                 * Pattern pattern.
+                 * @member {string} pattern
+                 * @memberof clutch.api.v1.Pattern
+                 * @instance
+                 */
+                Pattern.prototype.pattern = "";
+
+                /**
+                 * Verifies a Pattern message.
+                 * @function verify
+                 * @memberof clutch.api.v1.Pattern
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                Pattern.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    if (message.typeUrl != null && message.hasOwnProperty("typeUrl"))
+                        if (!$util.isString(message.typeUrl))
+                            return "typeUrl: string expected";
+                    if (message.pattern != null && message.hasOwnProperty("pattern"))
+                        if (!$util.isString(message.pattern))
+                            return "pattern: string expected";
+                    return null;
+                };
+
+                /**
+                 * Creates a Pattern message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof clutch.api.v1.Pattern
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {clutch.api.v1.Pattern} Pattern
+                 */
+                Pattern.fromObject = function fromObject(object) {
+                    if (object instanceof $root.clutch.api.v1.Pattern)
+                        return object;
+                    let message = new $root.clutch.api.v1.Pattern();
+                    if (object.typeUrl != null)
+                        message.typeUrl = String(object.typeUrl);
+                    if (object.pattern != null)
+                        message.pattern = String(object.pattern);
+                    return message;
+                };
+
+                /**
+                 * Creates a plain object from a Pattern message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof clutch.api.v1.Pattern
+                 * @static
+                 * @param {clutch.api.v1.Pattern} message Pattern
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                Pattern.toObject = function toObject(message, options) {
+                    if (!options)
+                        options = {};
+                    let object = {};
+                    if (options.defaults) {
+                        object.typeUrl = "";
+                        object.pattern = "";
+                    }
+                    if (message.typeUrl != null && message.hasOwnProperty("typeUrl"))
+                        object.typeUrl = message.typeUrl;
+                    if (message.pattern != null && message.hasOwnProperty("pattern"))
+                        object.pattern = message.pattern;
+                    return object;
+                };
+
+                /**
+                 * Converts this Pattern to JSON.
+                 * @function toJSON
+                 * @memberof clutch.api.v1.Pattern
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                Pattern.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+
+                return Pattern;
+            })();
+
+            v1.Identifier = (function() {
+
+                /**
+                 * Properties of an Identifier.
+                 * @memberof clutch.api.v1
+                 * @interface IIdentifier
+                 * @property {Array.<clutch.api.v1.IPattern>|null} [patterns] Identifier patterns
+                 */
+
+                /**
+                 * Constructs a new Identifier.
+                 * @memberof clutch.api.v1
+                 * @classdesc Represents an Identifier.
+                 * @implements IIdentifier
+                 * @constructor
+                 * @param {clutch.api.v1.IIdentifier=} [properties] Properties to set
+                 */
+                function Identifier(properties) {
+                    this.patterns = [];
+                    if (properties)
+                        for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+
+                /**
+                 * Identifier patterns.
+                 * @member {Array.<clutch.api.v1.IPattern>} patterns
+                 * @memberof clutch.api.v1.Identifier
+                 * @instance
+                 */
+                Identifier.prototype.patterns = $util.emptyArray;
+
+                /**
+                 * Verifies an Identifier message.
+                 * @function verify
+                 * @memberof clutch.api.v1.Identifier
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                Identifier.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    if (message.patterns != null && message.hasOwnProperty("patterns")) {
+                        if (!Array.isArray(message.patterns))
+                            return "patterns: array expected";
+                        for (let i = 0; i < message.patterns.length; ++i) {
+                            let error = $root.clutch.api.v1.Pattern.verify(message.patterns[i]);
+                            if (error)
+                                return "patterns." + error;
+                        }
+                    }
+                    return null;
+                };
+
+                /**
+                 * Creates an Identifier message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof clutch.api.v1.Identifier
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {clutch.api.v1.Identifier} Identifier
+                 */
+                Identifier.fromObject = function fromObject(object) {
+                    if (object instanceof $root.clutch.api.v1.Identifier)
+                        return object;
+                    let message = new $root.clutch.api.v1.Identifier();
+                    if (object.patterns) {
+                        if (!Array.isArray(object.patterns))
+                            throw TypeError(".clutch.api.v1.Identifier.patterns: array expected");
+                        message.patterns = [];
+                        for (let i = 0; i < object.patterns.length; ++i) {
+                            if (typeof object.patterns[i] !== "object")
+                                throw TypeError(".clutch.api.v1.Identifier.patterns: object expected");
+                            message.patterns[i] = $root.clutch.api.v1.Pattern.fromObject(object.patterns[i]);
+                        }
+                    }
+                    return message;
+                };
+
+                /**
+                 * Creates a plain object from an Identifier message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof clutch.api.v1.Identifier
+                 * @static
+                 * @param {clutch.api.v1.Identifier} message Identifier
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                Identifier.toObject = function toObject(message, options) {
+                    if (!options)
+                        options = {};
+                    let object = {};
+                    if (options.arrays || options.defaults)
+                        object.patterns = [];
+                    if (message.patterns && message.patterns.length) {
+                        object.patterns = [];
+                        for (let j = 0; j < message.patterns.length; ++j)
+                            object.patterns[j] = $root.clutch.api.v1.Pattern.toObject(message.patterns[j], options);
+                    }
+                    return object;
+                };
+
+                /**
+                 * Converts this Identifier to JSON.
+                 * @function toJSON
+                 * @memberof clutch.api.v1.Identifier
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                Identifier.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+
+                return Identifier;
+            })();
+
+            v1.Reference = (function() {
+
+                /**
+                 * Properties of a Reference.
+                 * @memberof clutch.api.v1
+                 * @interface IReference
+                 * @property {Array.<string>|null} [fields] Reference fields
+                 */
+
+                /**
+                 * Constructs a new Reference.
+                 * @memberof clutch.api.v1
+                 * @classdesc Represents a Reference.
+                 * @implements IReference
+                 * @constructor
+                 * @param {clutch.api.v1.IReference=} [properties] Properties to set
+                 */
+                function Reference(properties) {
+                    this.fields = [];
+                    if (properties)
+                        for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+
+                /**
+                 * Reference fields.
+                 * @member {Array.<string>} fields
+                 * @memberof clutch.api.v1.Reference
+                 * @instance
+                 */
+                Reference.prototype.fields = $util.emptyArray;
+
+                /**
+                 * Verifies a Reference message.
+                 * @function verify
+                 * @memberof clutch.api.v1.Reference
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                Reference.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    if (message.fields != null && message.hasOwnProperty("fields")) {
+                        if (!Array.isArray(message.fields))
+                            return "fields: array expected";
+                        for (let i = 0; i < message.fields.length; ++i)
+                            if (!$util.isString(message.fields[i]))
+                                return "fields: string[] expected";
+                    }
+                    return null;
+                };
+
+                /**
+                 * Creates a Reference message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof clutch.api.v1.Reference
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {clutch.api.v1.Reference} Reference
+                 */
+                Reference.fromObject = function fromObject(object) {
+                    if (object instanceof $root.clutch.api.v1.Reference)
+                        return object;
+                    let message = new $root.clutch.api.v1.Reference();
+                    if (object.fields) {
+                        if (!Array.isArray(object.fields))
+                            throw TypeError(".clutch.api.v1.Reference.fields: array expected");
+                        message.fields = [];
+                        for (let i = 0; i < object.fields.length; ++i)
+                            message.fields[i] = String(object.fields[i]);
+                    }
+                    return message;
+                };
+
+                /**
+                 * Creates a plain object from a Reference message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof clutch.api.v1.Reference
+                 * @static
+                 * @param {clutch.api.v1.Reference} message Reference
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                Reference.toObject = function toObject(message, options) {
+                    if (!options)
+                        options = {};
+                    let object = {};
+                    if (options.arrays || options.defaults)
+                        object.fields = [];
+                    if (message.fields && message.fields.length) {
+                        object.fields = [];
+                        for (let j = 0; j < message.fields.length; ++j)
+                            object.fields[j] = message.fields[j];
+                    }
+                    return object;
+                };
+
+                /**
+                 * Converts this Reference to JSON.
+                 * @function toJSON
+                 * @memberof clutch.api.v1.Reference
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                Reference.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+
+                return Reference;
+            })();
+
+            v1.Redacted = (function() {
+
+                /**
+                 * Properties of a Redacted.
+                 * @memberof clutch.api.v1
+                 * @interface IRedacted
+                 * @property {string|null} [redactedTypeUrl] Redacted redactedTypeUrl
+                 */
+
+                /**
+                 * Constructs a new Redacted.
+                 * @memberof clutch.api.v1
+                 * @classdesc Represents a Redacted.
+                 * @implements IRedacted
+                 * @constructor
+                 * @param {clutch.api.v1.IRedacted=} [properties] Properties to set
+                 */
+                function Redacted(properties) {
+                    if (properties)
+                        for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+
+                /**
+                 * Redacted redactedTypeUrl.
+                 * @member {string} redactedTypeUrl
+                 * @memberof clutch.api.v1.Redacted
+                 * @instance
+                 */
+                Redacted.prototype.redactedTypeUrl = "";
+
+                /**
+                 * Verifies a Redacted message.
+                 * @function verify
+                 * @memberof clutch.api.v1.Redacted
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                Redacted.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    if (message.redactedTypeUrl != null && message.hasOwnProperty("redactedTypeUrl"))
+                        if (!$util.isString(message.redactedTypeUrl))
+                            return "redactedTypeUrl: string expected";
+                    return null;
+                };
+
+                /**
+                 * Creates a Redacted message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof clutch.api.v1.Redacted
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {clutch.api.v1.Redacted} Redacted
+                 */
+                Redacted.fromObject = function fromObject(object) {
+                    if (object instanceof $root.clutch.api.v1.Redacted)
+                        return object;
+                    let message = new $root.clutch.api.v1.Redacted();
+                    if (object.redactedTypeUrl != null)
+                        message.redactedTypeUrl = String(object.redactedTypeUrl);
+                    return message;
+                };
+
+                /**
+                 * Creates a plain object from a Redacted message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof clutch.api.v1.Redacted
+                 * @static
+                 * @param {clutch.api.v1.Redacted} message Redacted
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                Redacted.toObject = function toObject(message, options) {
+                    if (!options)
+                        options = {};
+                    let object = {};
+                    if (options.defaults)
+                        object.redactedTypeUrl = "";
+                    if (message.redactedTypeUrl != null && message.hasOwnProperty("redactedTypeUrl"))
+                        object.redactedTypeUrl = message.redactedTypeUrl;
+                    return object;
+                };
+
+                /**
+                 * Converts this Redacted to JSON.
+                 * @function toJSON
+                 * @memberof clutch.api.v1.Redacted
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                Redacted.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+
+                return Redacted;
+            })();
+
+            return v1;
+        })();
+
+        return api;
+    })();
+
+    return clutch;
 })();
 
 export const validate = $root.validate = (() => {
@@ -13706,71 +14555,105 @@ export const google = $root.google = (() => {
     return google;
 })();
 
-export const clutch = $root.clutch = (() => {
+export const DanielYevelkin = $root.DanielYevelkin = (() => {
 
     /**
-     * Namespace clutch.
-     * @exports clutch
+     * Namespace DanielYevelkin.
+     * @exports DanielYevelkin
      * @namespace
      */
-    const clutch = {};
+    const DanielYevelkin = {};
 
-    clutch.api = (function() {
+    DanielYevelkin.echo = (function() {
 
         /**
-         * Namespace api.
-         * @memberof clutch
+         * Namespace echo.
+         * @memberof DanielYevelkin
          * @namespace
          */
-        const api = {};
+        const echo = {};
 
-        api.v1 = (function() {
+        echo.v1 = (function() {
 
             /**
              * Namespace v1.
-             * @memberof clutch.api
+             * @memberof DanielYevelkin.echo
              * @namespace
              */
             const v1 = {};
 
-            /**
-             * ActionType enum.
-             * @name clutch.api.v1.ActionType
-             * @enum {number}
-             * @property {number} UNSPECIFIED=0 UNSPECIFIED value
-             * @property {number} CREATE=1 CREATE value
-             * @property {number} READ=2 READ value
-             * @property {number} UPDATE=3 UPDATE value
-             * @property {number} DELETE=4 DELETE value
-             */
-            v1.ActionType = (function() {
-                const valuesById = {}, values = Object.create(valuesById);
-                values[valuesById[0] = "UNSPECIFIED"] = 0;
-                values[valuesById[1] = "CREATE"] = 1;
-                values[valuesById[2] = "READ"] = 2;
-                values[valuesById[3] = "UPDATE"] = 3;
-                values[valuesById[4] = "DELETE"] = 4;
-                return values;
+            v1.EchoAPI = (function() {
+
+                /**
+                 * Constructs a new EchoAPI service.
+                 * @memberof DanielYevelkin.echo.v1
+                 * @classdesc Represents an EchoAPI
+                 * @extends $protobuf.rpc.Service
+                 * @constructor
+                 * @param {$protobuf.RPCImpl} rpcImpl RPC implementation
+                 * @param {boolean} [requestDelimited=false] Whether requests are length-delimited
+                 * @param {boolean} [responseDelimited=false] Whether responses are length-delimited
+                 */
+                function EchoAPI(rpcImpl, requestDelimited, responseDelimited) {
+                    $protobuf.rpc.Service.call(this, rpcImpl, requestDelimited, responseDelimited);
+                }
+
+                (EchoAPI.prototype = Object.create($protobuf.rpc.Service.prototype)).constructor = EchoAPI;
+
+                /**
+                 * Callback as used by {@link DanielYevelkin.echo.v1.EchoAPI#sayHello}.
+                 * @memberof DanielYevelkin.echo.v1.EchoAPI
+                 * @typedef SayHelloCallback
+                 * @type {function}
+                 * @param {Error|null} error Error, if any
+                 * @param {DanielYevelkin.echo.v1.SayHelloResponse} [response] SayHelloResponse
+                 */
+
+                /**
+                 * Calls SayHello.
+                 * @function sayHello
+                 * @memberof DanielYevelkin.echo.v1.EchoAPI
+                 * @instance
+                 * @param {DanielYevelkin.echo.v1.ISayHelloRequest} request SayHelloRequest message or plain object
+                 * @param {DanielYevelkin.echo.v1.EchoAPI.SayHelloCallback} callback Node-style callback called with the error, if any, and SayHelloResponse
+                 * @returns {undefined}
+                 * @variation 1
+                 */
+                Object.defineProperty(EchoAPI.prototype.sayHello = function sayHello(request, callback) {
+                    return this.rpcCall(sayHello, $root.DanielYevelkin.echo.v1.SayHelloRequest, $root.DanielYevelkin.echo.v1.SayHelloResponse, request, callback);
+                }, "name", { value: "SayHello" });
+
+                /**
+                 * Calls SayHello.
+                 * @function sayHello
+                 * @memberof DanielYevelkin.echo.v1.EchoAPI
+                 * @instance
+                 * @param {DanielYevelkin.echo.v1.ISayHelloRequest} request SayHelloRequest message or plain object
+                 * @returns {Promise<DanielYevelkin.echo.v1.SayHelloResponse>} Promise
+                 * @variation 2
+                 */
+
+                return EchoAPI;
             })();
 
-            v1.Action = (function() {
+            v1.SayHelloRequest = (function() {
 
                 /**
-                 * Properties of an Action.
-                 * @memberof clutch.api.v1
-                 * @interface IAction
-                 * @property {clutch.api.v1.ActionType|null} [type] Action type
+                 * Properties of a SayHelloRequest.
+                 * @memberof DanielYevelkin.echo.v1
+                 * @interface ISayHelloRequest
+                 * @property {string|null} [name] SayHelloRequest name
                  */
 
                 /**
-                 * Constructs a new Action.
-                 * @memberof clutch.api.v1
-                 * @classdesc Represents an Action.
-                 * @implements IAction
+                 * Constructs a new SayHelloRequest.
+                 * @memberof DanielYevelkin.echo.v1
+                 * @classdesc Represents a SayHelloRequest.
+                 * @implements ISayHelloRequest
                  * @constructor
-                 * @param {clutch.api.v1.IAction=} [properties] Properties to set
+                 * @param {DanielYevelkin.echo.v1.ISayHelloRequest=} [properties] Properties to set
                  */
-                function Action(properties) {
+                function SayHelloRequest(properties) {
                     if (properties)
                         for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
                             if (properties[keys[i]] != null)
@@ -13778,128 +14661,99 @@ export const clutch = $root.clutch = (() => {
                 }
 
                 /**
-                 * Action type.
-                 * @member {clutch.api.v1.ActionType} type
-                 * @memberof clutch.api.v1.Action
+                 * SayHelloRequest name.
+                 * @member {string} name
+                 * @memberof DanielYevelkin.echo.v1.SayHelloRequest
                  * @instance
                  */
-                Action.prototype.type = 0;
+                SayHelloRequest.prototype.name = "";
 
                 /**
-                 * Verifies an Action message.
+                 * Verifies a SayHelloRequest message.
                  * @function verify
-                 * @memberof clutch.api.v1.Action
+                 * @memberof DanielYevelkin.echo.v1.SayHelloRequest
                  * @static
                  * @param {Object.<string,*>} message Plain object to verify
                  * @returns {string|null} `null` if valid, otherwise the reason why it is not
                  */
-                Action.verify = function verify(message) {
+                SayHelloRequest.verify = function verify(message) {
                     if (typeof message !== "object" || message === null)
                         return "object expected";
-                    if (message.type != null && message.hasOwnProperty("type"))
-                        switch (message.type) {
-                        default:
-                            return "type: enum value expected";
-                        case 0:
-                        case 1:
-                        case 2:
-                        case 3:
-                        case 4:
-                            break;
-                        }
+                    if (message.name != null && message.hasOwnProperty("name"))
+                        if (!$util.isString(message.name))
+                            return "name: string expected";
                     return null;
                 };
 
                 /**
-                 * Creates an Action message from a plain object. Also converts values to their respective internal types.
+                 * Creates a SayHelloRequest message from a plain object. Also converts values to their respective internal types.
                  * @function fromObject
-                 * @memberof clutch.api.v1.Action
+                 * @memberof DanielYevelkin.echo.v1.SayHelloRequest
                  * @static
                  * @param {Object.<string,*>} object Plain object
-                 * @returns {clutch.api.v1.Action} Action
+                 * @returns {DanielYevelkin.echo.v1.SayHelloRequest} SayHelloRequest
                  */
-                Action.fromObject = function fromObject(object) {
-                    if (object instanceof $root.clutch.api.v1.Action)
+                SayHelloRequest.fromObject = function fromObject(object) {
+                    if (object instanceof $root.DanielYevelkin.echo.v1.SayHelloRequest)
                         return object;
-                    let message = new $root.clutch.api.v1.Action();
-                    switch (object.type) {
-                    case "UNSPECIFIED":
-                    case 0:
-                        message.type = 0;
-                        break;
-                    case "CREATE":
-                    case 1:
-                        message.type = 1;
-                        break;
-                    case "READ":
-                    case 2:
-                        message.type = 2;
-                        break;
-                    case "UPDATE":
-                    case 3:
-                        message.type = 3;
-                        break;
-                    case "DELETE":
-                    case 4:
-                        message.type = 4;
-                        break;
-                    }
+                    let message = new $root.DanielYevelkin.echo.v1.SayHelloRequest();
+                    if (object.name != null)
+                        message.name = String(object.name);
                     return message;
                 };
 
                 /**
-                 * Creates a plain object from an Action message. Also converts values to other types if specified.
+                 * Creates a plain object from a SayHelloRequest message. Also converts values to other types if specified.
                  * @function toObject
-                 * @memberof clutch.api.v1.Action
+                 * @memberof DanielYevelkin.echo.v1.SayHelloRequest
                  * @static
-                 * @param {clutch.api.v1.Action} message Action
+                 * @param {DanielYevelkin.echo.v1.SayHelloRequest} message SayHelloRequest
                  * @param {$protobuf.IConversionOptions} [options] Conversion options
                  * @returns {Object.<string,*>} Plain object
                  */
-                Action.toObject = function toObject(message, options) {
+                SayHelloRequest.toObject = function toObject(message, options) {
                     if (!options)
                         options = {};
                     let object = {};
                     if (options.defaults)
-                        object.type = options.enums === String ? "UNSPECIFIED" : 0;
-                    if (message.type != null && message.hasOwnProperty("type"))
-                        object.type = options.enums === String ? $root.clutch.api.v1.ActionType[message.type] : message.type;
+                        object.name = "";
+                    if (message.name != null && message.hasOwnProperty("name"))
+                        object.name = message.name;
                     return object;
                 };
 
                 /**
-                 * Converts this Action to JSON.
+                 * Converts this SayHelloRequest to JSON.
                  * @function toJSON
-                 * @memberof clutch.api.v1.Action
+                 * @memberof DanielYevelkin.echo.v1.SayHelloRequest
                  * @instance
                  * @returns {Object.<string,*>} JSON object
                  */
-                Action.prototype.toJSON = function toJSON() {
+                SayHelloRequest.prototype.toJSON = function toJSON() {
                     return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
                 };
 
-                return Action;
+                return SayHelloRequest;
             })();
 
-            v1.Pattern = (function() {
+            v1.SayHelloResponse = (function() {
 
                 /**
-                 * Properties of a Pattern.
-                 * @memberof clutch.api.v1
-                 * @interface IPattern
-                 * @property {string|null} [typeUrl] Pattern typeUrl
-                 * @property {string|null} [pattern] Pattern pattern
+                 * Properties of a SayHelloResponse.
+                 * @memberof DanielYevelkin.echo.v1
+                 * @interface ISayHelloResponse
+                 * @property {string|null} [message] SayHelloResponse message
                  */
 
                 /**
-                 * Constructs a new Pattern.
-                 * @memberof clutch.api.v1
-                 * @classdesc Represents a Pattern.
-                 * @implements IPattern
+                 * Constructs a new SayHelloResponse.
+                 * @memberof DanielYevelkin.echo.v1
+                 * @classdesc Represents a SayHelloResponse.
+                 * @implements ISayHelloResponse
                  * @constructor
-                 * @param {clutch.api.v1.IPattern=} [properties] Properties to set
+                 * @param {DanielYevelkin.echo.v1.ISayHelloResponse=} [properties] Properties to set
                  */
-                function Pattern(properties) {
+                function SayHelloResponse(properties) {
                     if (properties)
                         for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
                             if (properties[keys[i]] != null)
@@ -13907,436 +14761,88 @@ export const clutch = $root.clutch = (() => {
                 }
 
                 /**
-                 * Pattern typeUrl.
-                 * @member {string} typeUrl
-                 * @memberof clutch.api.v1.Pattern
+                 * SayHelloResponse message.
+                 * @member {string} message
+                 * @memberof DanielYevelkin.echo.v1.SayHelloResponse
                  * @instance
                  */
-                Pattern.prototype.typeUrl = "";
+                SayHelloResponse.prototype.message = "";
 
                 /**
-                 * Pattern pattern.
-                 * @member {string} pattern
-                 * @memberof clutch.api.v1.Pattern
-                 * @instance
-                 */
-                Pattern.prototype.pattern = "";
-
-                /**
-                 * Verifies a Pattern message.
+                 * Verifies a SayHelloResponse message.
                  * @function verify
-                 * @memberof clutch.api.v1.Pattern
+                 * @memberof DanielYevelkin.echo.v1.SayHelloResponse
                  * @static
                  * @param {Object.<string,*>} message Plain object to verify
                  * @returns {string|null} `null` if valid, otherwise the reason why it is not
                  */
-                Pattern.verify = function verify(message) {
+                SayHelloResponse.verify = function verify(message) {
                     if (typeof message !== "object" || message === null)
                         return "object expected";
-                    if (message.typeUrl != null && message.hasOwnProperty("typeUrl"))
-                        if (!$util.isString(message.typeUrl))
-                            return "typeUrl: string expected";
-                    if (message.pattern != null && message.hasOwnProperty("pattern"))
-                        if (!$util.isString(message.pattern))
-                            return "pattern: string expected";
+                    if (message.message != null && message.hasOwnProperty("message"))
+                        if (!$util.isString(message.message))
+                            return "message: string expected";
                     return null;
                 };
 
                 /**
-                 * Creates a Pattern message from a plain object. Also converts values to their respective internal types.
+                 * Creates a SayHelloResponse message from a plain object. Also converts values to their respective internal types.
                  * @function fromObject
-                 * @memberof clutch.api.v1.Pattern
+                 * @memberof DanielYevelkin.echo.v1.SayHelloResponse
                  * @static
                  * @param {Object.<string,*>} object Plain object
-                 * @returns {clutch.api.v1.Pattern} Pattern
+                 * @returns {DanielYevelkin.echo.v1.SayHelloResponse} SayHelloResponse
                  */
-                Pattern.fromObject = function fromObject(object) {
-                    if (object instanceof $root.clutch.api.v1.Pattern)
+                SayHelloResponse.fromObject = function fromObject(object) {
+                    if (object instanceof $root.DanielYevelkin.echo.v1.SayHelloResponse)
                         return object;
-                    let message = new $root.clutch.api.v1.Pattern();
-                    if (object.typeUrl != null)
-                        message.typeUrl = String(object.typeUrl);
-                    if (object.pattern != null)
-                        message.pattern = String(object.pattern);
+                    let message = new $root.DanielYevelkin.echo.v1.SayHelloResponse();
+                    if (object.message != null)
+                        message.message = String(object.message);
                     return message;
                 };
 
                 /**
-                 * Creates a plain object from a Pattern message. Also converts values to other types if specified.
+                 * Creates a plain object from a SayHelloResponse message. Also converts values to other types if specified.
                  * @function toObject
-                 * @memberof clutch.api.v1.Pattern
+                 * @memberof DanielYevelkin.echo.v1.SayHelloResponse
                  * @static
-                 * @param {clutch.api.v1.Pattern} message Pattern
+                 * @param {DanielYevelkin.echo.v1.SayHelloResponse} message SayHelloResponse
                  * @param {$protobuf.IConversionOptions} [options] Conversion options
                  * @returns {Object.<string,*>} Plain object
                  */
-                Pattern.toObject = function toObject(message, options) {
-                    if (!options)
-                        options = {};
-                    let object = {};
-                    if (options.defaults) {
-                        object.typeUrl = "";
-                        object.pattern = "";
-                    }
-                    if (message.typeUrl != null && message.hasOwnProperty("typeUrl"))
-                        object.typeUrl = message.typeUrl;
-                    if (message.pattern != null && message.hasOwnProperty("pattern"))
-                        object.pattern = message.pattern;
-                    return object;
-                };
-
-                /**
-                 * Converts this Pattern to JSON.
-                 * @function toJSON
-                 * @memberof clutch.api.v1.Pattern
-                 * @instance
-                 * @returns {Object.<string,*>} JSON object
-                 */
-                Pattern.prototype.toJSON = function toJSON() {
-                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-                };
-
-                return Pattern;
-            })();
-
-            v1.Identifier = (function() {
-
-                /**
-                 * Properties of an Identifier.
-                 * @memberof clutch.api.v1
-                 * @interface IIdentifier
-                 * @property {Array.<clutch.api.v1.IPattern>|null} [patterns] Identifier patterns
-                 */
-
-                /**
-                 * Constructs a new Identifier.
-                 * @memberof clutch.api.v1
-                 * @classdesc Represents an Identifier.
-                 * @implements IIdentifier
-                 * @constructor
-                 * @param {clutch.api.v1.IIdentifier=} [properties] Properties to set
-                 */
-                function Identifier(properties) {
-                    this.patterns = [];
-                    if (properties)
-                        for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                            if (properties[keys[i]] != null)
-                                this[keys[i]] = properties[keys[i]];
-                }
-
-                /**
-                 * Identifier patterns.
-                 * @member {Array.<clutch.api.v1.IPattern>} patterns
-                 * @memberof clutch.api.v1.Identifier
-                 * @instance
-                 */
-                Identifier.prototype.patterns = $util.emptyArray;
-
-                /**
-                 * Verifies an Identifier message.
-                 * @function verify
-                 * @memberof clutch.api.v1.Identifier
-                 * @static
-                 * @param {Object.<string,*>} message Plain object to verify
-                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
-                 */
-                Identifier.verify = function verify(message) {
-                    if (typeof message !== "object" || message === null)
-                        return "object expected";
-                    if (message.patterns != null && message.hasOwnProperty("patterns")) {
-                        if (!Array.isArray(message.patterns))
-                            return "patterns: array expected";
-                        for (let i = 0; i < message.patterns.length; ++i) {
-                            let error = $root.clutch.api.v1.Pattern.verify(message.patterns[i]);
-                            if (error)
-                                return "patterns." + error;
-                        }
-                    }
-                    return null;
-                };
-
-                /**
-                 * Creates an Identifier message from a plain object. Also converts values to their respective internal types.
-                 * @function fromObject
-                 * @memberof clutch.api.v1.Identifier
-                 * @static
-                 * @param {Object.<string,*>} object Plain object
-                 * @returns {clutch.api.v1.Identifier} Identifier
-                 */
-                Identifier.fromObject = function fromObject(object) {
-                    if (object instanceof $root.clutch.api.v1.Identifier)
-                        return object;
-                    let message = new $root.clutch.api.v1.Identifier();
-                    if (object.patterns) {
-                        if (!Array.isArray(object.patterns))
-                            throw TypeError(".clutch.api.v1.Identifier.patterns: array expected");
-                        message.patterns = [];
-                        for (let i = 0; i < object.patterns.length; ++i) {
-                            if (typeof object.patterns[i] !== "object")
-                                throw TypeError(".clutch.api.v1.Identifier.patterns: object expected");
-                            message.patterns[i] = $root.clutch.api.v1.Pattern.fromObject(object.patterns[i]);
-                        }
-                    }
-                    return message;
-                };
-
-                /**
-                 * Creates a plain object from an Identifier message. Also converts values to other types if specified.
-                 * @function toObject
-                 * @memberof clutch.api.v1.Identifier
-                 * @static
-                 * @param {clutch.api.v1.Identifier} message Identifier
-                 * @param {$protobuf.IConversionOptions} [options] Conversion options
-                 * @returns {Object.<string,*>} Plain object
-                 */
-                Identifier.toObject = function toObject(message, options) {
-                    if (!options)
-                        options = {};
-                    let object = {};
-                    if (options.arrays || options.defaults)
-                        object.patterns = [];
-                    if (message.patterns && message.patterns.length) {
-                        object.patterns = [];
-                        for (let j = 0; j < message.patterns.length; ++j)
-                            object.patterns[j] = $root.clutch.api.v1.Pattern.toObject(message.patterns[j], options);
-                    }
-                    return object;
-                };
-
-                /**
-                 * Converts this Identifier to JSON.
-                 * @function toJSON
-                 * @memberof clutch.api.v1.Identifier
-                 * @instance
-                 * @returns {Object.<string,*>} JSON object
-                 */
-                Identifier.prototype.toJSON = function toJSON() {
-                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-                };
-
-                return Identifier;
-            })();
-
-            v1.Reference = (function() {
-
-                /**
-                 * Properties of a Reference.
-                 * @memberof clutch.api.v1
-                 * @interface IReference
-                 * @property {Array.<string>|null} [fields] Reference fields
-                 */
-
-                /**
-                 * Constructs a new Reference.
-                 * @memberof clutch.api.v1
-                 * @classdesc Represents a Reference.
-                 * @implements IReference
-                 * @constructor
-                 * @param {clutch.api.v1.IReference=} [properties] Properties to set
-                 */
-                function Reference(properties) {
-                    this.fields = [];
-                    if (properties)
-                        for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                            if (properties[keys[i]] != null)
-                                this[keys[i]] = properties[keys[i]];
-                }
-
-                /**
-                 * Reference fields.
-                 * @member {Array.<string>} fields
-                 * @memberof clutch.api.v1.Reference
-                 * @instance
-                 */
-                Reference.prototype.fields = $util.emptyArray;
-
-                /**
-                 * Verifies a Reference message.
-                 * @function verify
-                 * @memberof clutch.api.v1.Reference
-                 * @static
-                 * @param {Object.<string,*>} message Plain object to verify
-                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
-                 */
-                Reference.verify = function verify(message) {
-                    if (typeof message !== "object" || message === null)
-                        return "object expected";
-                    if (message.fields != null && message.hasOwnProperty("fields")) {
-                        if (!Array.isArray(message.fields))
-                            return "fields: array expected";
-                        for (let i = 0; i < message.fields.length; ++i)
-                            if (!$util.isString(message.fields[i]))
-                                return "fields: string[] expected";
-                    }
-                    return null;
-                };
-
-                /**
-                 * Creates a Reference message from a plain object. Also converts values to their respective internal types.
-                 * @function fromObject
-                 * @memberof clutch.api.v1.Reference
-                 * @static
-                 * @param {Object.<string,*>} object Plain object
-                 * @returns {clutch.api.v1.Reference} Reference
-                 */
-                Reference.fromObject = function fromObject(object) {
-                    if (object instanceof $root.clutch.api.v1.Reference)
-                        return object;
-                    let message = new $root.clutch.api.v1.Reference();
-                    if (object.fields) {
-                        if (!Array.isArray(object.fields))
-                            throw TypeError(".clutch.api.v1.Reference.fields: array expected");
-                        message.fields = [];
-                        for (let i = 0; i < object.fields.length; ++i)
-                            message.fields[i] = String(object.fields[i]);
-                    }
-                    return message;
-                };
-
-                /**
-                 * Creates a plain object from a Reference message. Also converts values to other types if specified.
-                 * @function toObject
-                 * @memberof clutch.api.v1.Reference
-                 * @static
-                 * @param {clutch.api.v1.Reference} message Reference
-                 * @param {$protobuf.IConversionOptions} [options] Conversion options
-                 * @returns {Object.<string,*>} Plain object
-                 */
-                Reference.toObject = function toObject(message, options) {
-                    if (!options)
-                        options = {};
-                    let object = {};
-                    if (options.arrays || options.defaults)
-                        object.fields = [];
-                    if (message.fields && message.fields.length) {
-                        object.fields = [];
-                        for (let j = 0; j < message.fields.length; ++j)
-                            object.fields[j] = message.fields[j];
-                    }
-                    return object;
-                };
-
-                /**
-                 * Converts this Reference to JSON.
-                 * @function toJSON
-                 * @memberof clutch.api.v1.Reference
-                 * @instance
-                 * @returns {Object.<string,*>} JSON object
-                 */
-                Reference.prototype.toJSON = function toJSON() {
-                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-                };
-
-                return Reference;
-            })();
-
-            v1.Redacted = (function() {
-
-                /**
-                 * Properties of a Redacted.
-                 * @memberof clutch.api.v1
-                 * @interface IRedacted
-                 * @property {string|null} [redactedTypeUrl] Redacted redactedTypeUrl
-                 */
-
-                /**
-                 * Constructs a new Redacted.
-                 * @memberof clutch.api.v1
-                 * @classdesc Represents a Redacted.
-                 * @implements IRedacted
-                 * @constructor
-                 * @param {clutch.api.v1.IRedacted=} [properties] Properties to set
-                 */
-                function Redacted(properties) {
-                    if (properties)
-                        for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                            if (properties[keys[i]] != null)
-                                this[keys[i]] = properties[keys[i]];
-                }
-
-                /**
-                 * Redacted redactedTypeUrl.
-                 * @member {string} redactedTypeUrl
-                 * @memberof clutch.api.v1.Redacted
-                 * @instance
-                 */
-                Redacted.prototype.redactedTypeUrl = "";
-
-                /**
-                 * Verifies a Redacted message.
-                 * @function verify
-                 * @memberof clutch.api.v1.Redacted
-                 * @static
-                 * @param {Object.<string,*>} message Plain object to verify
-                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
-                 */
-                Redacted.verify = function verify(message) {
-                    if (typeof message !== "object" || message === null)
-                        return "object expected";
-                    if (message.redactedTypeUrl != null && message.hasOwnProperty("redactedTypeUrl"))
-                        if (!$util.isString(message.redactedTypeUrl))
-                            return "redactedTypeUrl: string expected";
-                    return null;
-                };
-
-                /**
-                 * Creates a Redacted message from a plain object. Also converts values to their respective internal types.
-                 * @function fromObject
-                 * @memberof clutch.api.v1.Redacted
-                 * @static
-                 * @param {Object.<string,*>} object Plain object
-                 * @returns {clutch.api.v1.Redacted} Redacted
-                 */
-                Redacted.fromObject = function fromObject(object) {
-                    if (object instanceof $root.clutch.api.v1.Redacted)
-                        return object;
-                    let message = new $root.clutch.api.v1.Redacted();
-                    if (object.redactedTypeUrl != null)
-                        message.redactedTypeUrl = String(object.redactedTypeUrl);
-                    return message;
-                };
-
-                /**
-                 * Creates a plain object from a Redacted message. Also converts values to other types if specified.
-                 * @function toObject
-                 * @memberof clutch.api.v1.Redacted
-                 * @static
-                 * @param {clutch.api.v1.Redacted} message Redacted
-                 * @param {$protobuf.IConversionOptions} [options] Conversion options
-                 * @returns {Object.<string,*>} Plain object
-                 */
-                Redacted.toObject = function toObject(message, options) {
+                SayHelloResponse.toObject = function toObject(message, options) {
                     if (!options)
                         options = {};
                     let object = {};
                     if (options.defaults)
-                        object.redactedTypeUrl = "";
-                    if (message.redactedTypeUrl != null && message.hasOwnProperty("redactedTypeUrl"))
-                        object.redactedTypeUrl = message.redactedTypeUrl;
+                        object.message = "";
+                    if (message.message != null && message.hasOwnProperty("message"))
+                        object.message = message.message;
                     return object;
                 };
 
                 /**
-                 * Converts this Redacted to JSON.
+                 * Converts this SayHelloResponse to JSON.
                  * @function toJSON
-                 * @memberof clutch.api.v1.Redacted
+                 * @memberof DanielYevelkin.echo.v1.SayHelloResponse
                  * @instance
                  * @returns {Object.<string,*>} JSON object
                  */
-                Redacted.prototype.toJSON = function toJSON() {
+                SayHelloResponse.prototype.toJSON = function toJSON() {
                     return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
                 };
 
-                return Redacted;
+                return SayHelloResponse;
             })();
 
             return v1;
         })();
 
-        return api;
+        return echo;
     })();
 
-    return clutch;
+    return DanielYevelkin;
 })();
 
 export { $root as default };

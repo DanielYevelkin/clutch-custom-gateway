@@ -1,3 +1,4 @@
 build/
 backend/.air/
 backend/.env.local
+node_modules/

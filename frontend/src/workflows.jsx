@@ -5,9 +5,11 @@
 */
 import { default as clutchShEc2} from "@clutch-sh/ec2";
 import { default as clutchCustomGatewayEcho} from "@clutch-custom-gateway/echo";
+import { default as clutchShAmiibo} from "@clutch-sh/amiibo";
 
 const registeredWorkflows = {
   "@clutch-sh/ec2": clutchShEc2,
   "@clutch-custom-gateway/echo": clutchCustomGatewayEcho,
+  "@clutch-sh/amiibo": clutchShAmiibo,
 };
 export default registeredWorkflows;

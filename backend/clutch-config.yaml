@@ -11,8 +11,11 @@ gateway:
   middleware:
     - name: clutch.middleware.stats
     - name: clutch.middleware.validate
+services:
+  - name: gateway.service.amiibo
 modules:
   - name: clutch.module.healthcheck
   - name: clutch.module.resolver
   - name: clutch.module.assets
   - name: DanielYevelkin.module.echo
+  - name: gateway.module.amiibo
