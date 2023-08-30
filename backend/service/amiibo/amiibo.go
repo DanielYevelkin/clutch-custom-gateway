@@ -61,6 +61,7 @@ func charactersFromJSON(data []byte) ([]*amiibov1.Amiibo, error) {
     if err := json.Unmarshal(data, &raw); err != nil {
         return nil, err
     }
+    //creating an amibo type slice with the lenth of the raw input
     ret := make([]*amiibov1.Amiibo, len(raw.Amiibo))
     for i, a := range raw.Amiibo {
         ret[i] = a.toProto()
@@ -86,6 +87,16 @@ func (c *client) GetAmiibo(ctx context.Context, name string) ([]*amiibov1.Amiibo
     }
     if resp.StatusCode != 200 {
         return nil, status.Error(service.CodeFromHTTPStatus(resp.StatusCode), string(body))
+    }
+    amiibos, err := charactersFromJSON(body)
+    if err != nil {
+        // Handle error
+        fmt.Println("Error:", err)
+    }
+
+    for i, amiibo := range amiibos {
+        fmt.Printf("Amiibo %d: %s\n", i+1, amiibo.String())
+
     }
     return charactersFromJSON(body)
 }

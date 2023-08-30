@@ -40,6 +40,7 @@ func (m *mod) Register(r module.Registrar) error {
 }
 
 func (m *mod) GetAmiibo(ctx context.Context, request *amiibov1.GetAmiiboRequest) (*amiibov1.GetAmiiboResponse, error) {
+    print(request)
     a, err := m.client.GetAmiibo(ctx, request.Name)
     if err != nil {
         return nil, err

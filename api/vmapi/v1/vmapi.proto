@@ -1,0 +1,52 @@
+syntax = "proto3";
+
+package vmapi;
+
+option go_package = "github.com/DanielYevelkin/clutch-custom-gateway/backend/api/vmapi/v1;vmapiv1";
+
+import "google/api/annotations.proto";
+import "validate/validate.proto";
+
+service VirtualMachineService {
+  rpc GetVMs (GetVMsRequest) returns (GetVMsResponse){
+    option (google.api.http) = {
+      post : "/v1/vmapi/getvm"
+      body : "*"
+    };
+  }
+  // Add a new virtual machine
+  rpc AddVM (AddVMRequest) returns (AddVMResponse){
+    option (google.api.http) = {
+      post : "/v1/vmapi/addvm"
+      body : "*"
+    };
+  }
+};
+
+// The request message for getting virtual machines
+message GetVMsRequest {
+  // Optional filters can be added here
+}
+
+// The response message for getting virtual machines
+message GetVMsResponse {
+  repeated VirtualMachine vms = 1;
+}
+
+// The request message for adding a virtual machine
+message AddVMRequest {
+  VirtualMachine vm = 1;
+}
+
+// The response message for adding a virtual machine
+message AddVMResponse {
+  VirtualMachine vm = 1;
+}
+
+// VirtualMachine represents the structure of a VM
+message VirtualMachine {
+  string id = 1 [ (validate.rules).string = {min_bytes : 1} ];
+  string name = 2 [ (validate.rules).string = {min_bytes : 1} ];
+  int32 cpu = 3 [ (validate.rules).int32 = {gt : 0} ];
+  int32 ram = 4 [ (validate.rules).int32 = {gt : 0} ];
+}

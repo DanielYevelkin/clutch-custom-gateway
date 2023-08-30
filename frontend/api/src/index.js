@@ -14845,4 +14845,661 @@ export const DanielYevelkin = $root.DanielYevelkin = (() => {
     return DanielYevelkin;
 })();
 
+export const vmapi = $root.vmapi = (() => {
+
+    /**
+     * Namespace vmapi.
+     * @exports vmapi
+     * @namespace
+     */
+    const vmapi = {};
+
+    vmapi.VirtualMachineService = (function() {
+
+        /**
+         * Constructs a new VirtualMachineService service.
+         * @memberof vmapi
+         * @classdesc Represents a VirtualMachineService
+         * @extends $protobuf.rpc.Service
+         * @constructor
+         * @param {$protobuf.RPCImpl} rpcImpl RPC implementation
+         * @param {boolean} [requestDelimited=false] Whether requests are length-delimited
+         * @param {boolean} [responseDelimited=false] Whether responses are length-delimited
+         */
+        function VirtualMachineService(rpcImpl, requestDelimited, responseDelimited) {
+            $protobuf.rpc.Service.call(this, rpcImpl, requestDelimited, responseDelimited);
+        }
+
+        (VirtualMachineService.prototype = Object.create($protobuf.rpc.Service.prototype)).constructor = VirtualMachineService;
+
+        /**
+         * Callback as used by {@link vmapi.VirtualMachineService#getVMs}.
+         * @memberof vmapi.VirtualMachineService
+         * @typedef GetVMsCallback
+         * @type {function}
+         * @param {Error|null} error Error, if any
+         * @param {vmapi.GetVMsResponse} [response] GetVMsResponse
+         */
+
+        /**
+         * Calls GetVMs.
+         * @function getVMs
+         * @memberof vmapi.VirtualMachineService
+         * @instance
+         * @param {vmapi.IGetVMsRequest} request GetVMsRequest message or plain object
+         * @param {vmapi.VirtualMachineService.GetVMsCallback} callback Node-style callback called with the error, if any, and GetVMsResponse
+         * @returns {undefined}
+         * @variation 1
+         */
+        Object.defineProperty(VirtualMachineService.prototype.getVMs = function getVMs(request, callback) {
+            return this.rpcCall(getVMs, $root.vmapi.GetVMsRequest, $root.vmapi.GetVMsResponse, request, callback);
+        }, "name", { value: "GetVMs" });
+
+        /**
+         * Calls GetVMs.
+         * @function getVMs
+         * @memberof vmapi.VirtualMachineService
+         * @instance
+         * @param {vmapi.IGetVMsRequest} request GetVMsRequest message or plain object
+         * @returns {Promise<vmapi.GetVMsResponse>} Promise
+         * @variation 2
+         */
+
+        /**
+         * Callback as used by {@link vmapi.VirtualMachineService#addVM}.
+         * @memberof vmapi.VirtualMachineService
+         * @typedef AddVMCallback
+         * @type {function}
+         * @param {Error|null} error Error, if any
+         * @param {vmapi.AddVMResponse} [response] AddVMResponse
+         */
+
+        /**
+         * Calls AddVM.
+         * @function addVM
+         * @memberof vmapi.VirtualMachineService
+         * @instance
+         * @param {vmapi.IAddVMRequest} request AddVMRequest message or plain object
+         * @param {vmapi.VirtualMachineService.AddVMCallback} callback Node-style callback called with the error, if any, and AddVMResponse
+         * @returns {undefined}
+         * @variation 1
+         */
+        Object.defineProperty(VirtualMachineService.prototype.addVM = function addVM(request, callback) {
+            return this.rpcCall(addVM, $root.vmapi.AddVMRequest, $root.vmapi.AddVMResponse, request, callback);
+        }, "name", { value: "AddVM" });
+
+        /**
+         * Calls AddVM.
+         * @function addVM
+         * @memberof vmapi.VirtualMachineService
+         * @instance
+         * @param {vmapi.IAddVMRequest} request AddVMRequest message or plain object
+         * @returns {Promise<vmapi.AddVMResponse>} Promise
+         * @variation 2
+         */
+
+        return VirtualMachineService;
+    })();
+
+    vmapi.GetVMsRequest = (function() {
+
+        /**
+         * Properties of a GetVMsRequest.
+         * @memberof vmapi
+         * @interface IGetVMsRequest
+         */
+
+        /**
+         * Constructs a new GetVMsRequest.
+         * @memberof vmapi
+         * @classdesc Represents a GetVMsRequest.
+         * @implements IGetVMsRequest
+         * @constructor
+         * @param {vmapi.IGetVMsRequest=} [properties] Properties to set
+         */
+        function GetVMsRequest(properties) {
+            if (properties)
+                for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                    if (properties[keys[i]] != null)
+                        this[keys[i]] = properties[keys[i]];
+        }
+
+        /**
+         * Verifies a GetVMsRequest message.
+         * @function verify
+         * @memberof vmapi.GetVMsRequest
+         * @static
+         * @param {Object.<string,*>} message Plain object to verify
+         * @returns {string|null} `null` if valid, otherwise the reason why it is not
+         */
+        GetVMsRequest.verify = function verify(message) {
+            if (typeof message !== "object" || message === null)
+                return "object expected";
+            return null;
+        };
+
+        /**
+         * Creates a GetVMsRequest message from a plain object. Also converts values to their respective internal types.
+         * @function fromObject
+         * @memberof vmapi.GetVMsRequest
+         * @static
+         * @param {Object.<string,*>} object Plain object
+         * @returns {vmapi.GetVMsRequest} GetVMsRequest
+         */
+        GetVMsRequest.fromObject = function fromObject(object) {
+            if (object instanceof $root.vmapi.GetVMsRequest)
+                return object;
+            return new $root.vmapi.GetVMsRequest();
+        };
+
+        /**
+         * Creates a plain object from a GetVMsRequest message. Also converts values to other types if specified.
+         * @function toObject
+         * @memberof vmapi.GetVMsRequest
+         * @static
+         * @param {vmapi.GetVMsRequest} message GetVMsRequest
+         * @param {$protobuf.IConversionOptions} [options] Conversion options
+         * @returns {Object.<string,*>} Plain object
+         */
+        GetVMsRequest.toObject = function toObject() {
+            return {};
+        };
+
+        /**
+         * Converts this GetVMsRequest to JSON.
+         * @function toJSON
+         * @memberof vmapi.GetVMsRequest
+         * @instance
+         * @returns {Object.<string,*>} JSON object
+         */
+        GetVMsRequest.prototype.toJSON = function toJSON() {
+            return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+        };
+
+        return GetVMsRequest;
+    })();
+
+    vmapi.GetVMsResponse = (function() {
+
+        /**
+         * Properties of a GetVMsResponse.
+         * @memberof vmapi
+         * @interface IGetVMsResponse
+         * @property {Array.<vmapi.IVirtualMachine>|null} [vms] GetVMsResponse vms
+         */
+
+        /**
+         * Constructs a new GetVMsResponse.
+         * @memberof vmapi
+         * @classdesc Represents a GetVMsResponse.
+         * @implements IGetVMsResponse
+         * @constructor
+         * @param {vmapi.IGetVMsResponse=} [properties] Properties to set
+         */
+        function GetVMsResponse(properties) {
+            this.vms = [];
+            if (properties)
+                for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                    if (properties[keys[i]] != null)
+                        this[keys[i]] = properties[keys[i]];
+        }
+
+        /**
+         * GetVMsResponse vms.
+         * @member {Array.<vmapi.IVirtualMachine>} vms
+         * @memberof vmapi.GetVMsResponse
+         * @instance
+         */
+        GetVMsResponse.prototype.vms = $util.emptyArray;
+
+        /**
+         * Verifies a GetVMsResponse message.
+         * @function verify
+         * @memberof vmapi.GetVMsResponse
+         * @static
+         * @param {Object.<string,*>} message Plain object to verify
+         * @returns {string|null} `null` if valid, otherwise the reason why it is not
+         */
+        GetVMsResponse.verify = function verify(message) {
+            if (typeof message !== "object" || message === null)
+                return "object expected";
+            if (message.vms != null && message.hasOwnProperty("vms")) {
+                if (!Array.isArray(message.vms))
+                    return "vms: array expected";
+                for (let i = 0; i < message.vms.length; ++i) {
+                    let error = $root.vmapi.VirtualMachine.verify(message.vms[i]);
+                    if (error)
+                        return "vms." + error;
+                }
+            }
+            return null;
+        };
+
+        /**
+         * Creates a GetVMsResponse message from a plain object. Also converts values to their respective internal types.
+         * @function fromObject
+         * @memberof vmapi.GetVMsResponse
+         * @static
+         * @param {Object.<string,*>} object Plain object
+         * @returns {vmapi.GetVMsResponse} GetVMsResponse
+         */
+        GetVMsResponse.fromObject = function fromObject(object) {
+            if (object instanceof $root.vmapi.GetVMsResponse)
+                return object;
+            let message = new $root.vmapi.GetVMsResponse();
+            if (object.vms) {
+                if (!Array.isArray(object.vms))
+                    throw TypeError(".vmapi.GetVMsResponse.vms: array expected");
+                message.vms = [];
+                for (let i = 0; i < object.vms.length; ++i) {
+                    if (typeof object.vms[i] !== "object")
+                        throw TypeError(".vmapi.GetVMsResponse.vms: object expected");
+                    message.vms[i] = $root.vmapi.VirtualMachine.fromObject(object.vms[i]);
+                }
+            }
+            return message;
+        };
+
+        /**
+         * Creates a plain object from a GetVMsResponse message. Also converts values to other types if specified.
+         * @function toObject
+         * @memberof vmapi.GetVMsResponse
+         * @static
+         * @param {vmapi.GetVMsResponse} message GetVMsResponse
+         * @param {$protobuf.IConversionOptions} [options] Conversion options
+         * @returns {Object.<string,*>} Plain object
+         */
+        GetVMsResponse.toObject = function toObject(message, options) {
+            if (!options)
+                options = {};
+            let object = {};
+            if (options.arrays || options.defaults)
+                object.vms = [];
+            if (message.vms && message.vms.length) {
+                object.vms = [];
+                for (let j = 0; j < message.vms.length; ++j)
+                    object.vms[j] = $root.vmapi.VirtualMachine.toObject(message.vms[j], options);
+            }
+            return object;
+        };
+
+        /**
+         * Converts this GetVMsResponse to JSON.
+         * @function toJSON
+         * @memberof vmapi.GetVMsResponse
+         * @instance
+         * @returns {Object.<string,*>} JSON object
+         */
+        GetVMsResponse.prototype.toJSON = function toJSON() {
+            return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+        };
+
+        return GetVMsResponse;
+    })();
+
+    vmapi.AddVMRequest = (function() {
+
+        /**
+         * Properties of an AddVMRequest.
+         * @memberof vmapi
+         * @interface IAddVMRequest
+         * @property {vmapi.IVirtualMachine|null} [vm] AddVMRequest vm
+         */
+
+        /**
+         * Constructs a new AddVMRequest.
+         * @memberof vmapi
+         * @classdesc Represents an AddVMRequest.
+         * @implements IAddVMRequest
+         * @constructor
+         * @param {vmapi.IAddVMRequest=} [properties] Properties to set
+         */
+        function AddVMRequest(properties) {
+            if (properties)
+                for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                    if (properties[keys[i]] != null)
+                        this[keys[i]] = properties[keys[i]];
+        }
+
+        /**
+         * AddVMRequest vm.
+         * @member {vmapi.IVirtualMachine|null|undefined} vm
+         * @memberof vmapi.AddVMRequest
+         * @instance
+         */
+        AddVMRequest.prototype.vm = null;
+
+        /**
+         * Verifies an AddVMRequest message.
+         * @function verify
+         * @memberof vmapi.AddVMRequest
+         * @static
+         * @param {Object.<string,*>} message Plain object to verify
+         * @returns {string|null} `null` if valid, otherwise the reason why it is not
+         */
+        AddVMRequest.verify = function verify(message) {
+            if (typeof message !== "object" || message === null)
+                return "object expected";
+            if (message.vm != null && message.hasOwnProperty("vm")) {
+                let error = $root.vmapi.VirtualMachine.verify(message.vm);
+                if (error)
+                    return "vm." + error;
+            }
+            return null;
+        };
+
+        /**
+         * Creates an AddVMRequest message from a plain object. Also converts values to their respective internal types.
+         * @function fromObject
+         * @memberof vmapi.AddVMRequest
+         * @static
+         * @param {Object.<string,*>} object Plain object
+         * @returns {vmapi.AddVMRequest} AddVMRequest
+         */
+        AddVMRequest.fromObject = function fromObject(object) {
+            if (object instanceof $root.vmapi.AddVMRequest)
+                return object;
+            let message = new $root.vmapi.AddVMRequest();
+            if (object.vm != null) {
+                if (typeof object.vm !== "object")
+                    throw TypeError(".vmapi.AddVMRequest.vm: object expected");
+                message.vm = $root.vmapi.VirtualMachine.fromObject(object.vm);
+            }
+            return message;
+        };
+
+        /**
+         * Creates a plain object from an AddVMRequest message. Also converts values to other types if specified.
+         * @function toObject
+         * @memberof vmapi.AddVMRequest
+         * @static
+         * @param {vmapi.AddVMRequest} message AddVMRequest
+         * @param {$protobuf.IConversionOptions} [options] Conversion options
+         * @returns {Object.<string,*>} Plain object
+         */
+        AddVMRequest.toObject = function toObject(message, options) {
+            if (!options)
+                options = {};
+            let object = {};
+            if (options.defaults)
+                object.vm = null;
+            if (message.vm != null && message.hasOwnProperty("vm"))
+                object.vm = $root.vmapi.VirtualMachine.toObject(message.vm, options);
+            return object;
+        };
+
+        /**
+         * Converts this AddVMRequest to JSON.
+         * @function toJSON
+         * @memberof vmapi.AddVMRequest
+         * @instance
+         * @returns {Object.<string,*>} JSON object
+         */
+        AddVMRequest.prototype.toJSON = function toJSON() {
+            return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+        };
+
+        return AddVMRequest;
+    })();
+
+    vmapi.AddVMResponse = (function() {
+
+        /**
+         * Properties of an AddVMResponse.
+         * @memberof vmapi
+         * @interface IAddVMResponse
+         * @property {vmapi.IVirtualMachine|null} [vm] AddVMResponse vm
+         */
+
+        /**
+         * Constructs a new AddVMResponse.
+         * @memberof vmapi
+         * @classdesc Represents an AddVMResponse.
+         * @implements IAddVMResponse
+         * @constructor
+         * @param {vmapi.IAddVMResponse=} [properties] Properties to set
+         */
+        function AddVMResponse(properties) {
+            if (properties)
+                for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                    if (properties[keys[i]] != null)
+                        this[keys[i]] = properties[keys[i]];
+        }
+
+        /**
+         * AddVMResponse vm.
+         * @member {vmapi.IVirtualMachine|null|undefined} vm
+         * @memberof vmapi.AddVMResponse
+         * @instance
+         */
+        AddVMResponse.prototype.vm = null;
+
+        /**
+         * Verifies an AddVMResponse message.
+         * @function verify
+         * @memberof vmapi.AddVMResponse
+         * @static
+         * @param {Object.<string,*>} message Plain object to verify
+         * @returns {string|null} `null` if valid, otherwise the reason why it is not
+         */
+        AddVMResponse.verify = function verify(message) {
+            if (typeof message !== "object" || message === null)
+                return "object expected";
+            if (message.vm != null && message.hasOwnProperty("vm")) {
+                let error = $root.vmapi.VirtualMachine.verify(message.vm);
+                if (error)
+                    return "vm." + error;
+            }
+            return null;
+        };
+
+        /**
+         * Creates an AddVMResponse message from a plain object. Also converts values to their respective internal types.
+         * @function fromObject
+         * @memberof vmapi.AddVMResponse
+         * @static
+         * @param {Object.<string,*>} object Plain object
+         * @returns {vmapi.AddVMResponse} AddVMResponse
+         */
+        AddVMResponse.fromObject = function fromObject(object) {
+            if (object instanceof $root.vmapi.AddVMResponse)
+                return object;
+            let message = new $root.vmapi.AddVMResponse();
+            if (object.vm != null) {
+                if (typeof object.vm !== "object")
+                    throw TypeError(".vmapi.AddVMResponse.vm: object expected");
+                message.vm = $root.vmapi.VirtualMachine.fromObject(object.vm);
+            }
+            return message;
+        };
+
+        /**
+         * Creates a plain object from an AddVMResponse message. Also converts values to other types if specified.
+         * @function toObject
+         * @memberof vmapi.AddVMResponse
+         * @static
+         * @param {vmapi.AddVMResponse} message AddVMResponse
+         * @param {$protobuf.IConversionOptions} [options] Conversion options
+         * @returns {Object.<string,*>} Plain object
+         */
+        AddVMResponse.toObject = function toObject(message, options) {
+            if (!options)
+                options = {};
+            let object = {};
+            if (options.defaults)
+                object.vm = null;
+            if (message.vm != null && message.hasOwnProperty("vm"))
+                object.vm = $root.vmapi.VirtualMachine.toObject(message.vm, options);
+            return object;
+        };
+
+        /**
+         * Converts this AddVMResponse to JSON.
+         * @function toJSON
+         * @memberof vmapi.AddVMResponse
+         * @instance
+         * @returns {Object.<string,*>} JSON object
+         */
+        AddVMResponse.prototype.toJSON = function toJSON() {
+            return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+        };
+
+        return AddVMResponse;
+    })();
+
+    vmapi.VirtualMachine = (function() {
+
+        /**
+         * Properties of a VirtualMachine.
+         * @memberof vmapi
+         * @interface IVirtualMachine
+         * @property {string|null} [id] VirtualMachine id
+         * @property {string|null} [name] VirtualMachine name
+         * @property {number|null} [cpu] VirtualMachine cpu
+         * @property {number|null} [ram] VirtualMachine ram
+         */
+
+        /**
+         * Constructs a new VirtualMachine.
+         * @memberof vmapi
+         * @classdesc Represents a VirtualMachine.
+         * @implements IVirtualMachine
+         * @constructor
+         * @param {vmapi.IVirtualMachine=} [properties] Properties to set
+         */
+        function VirtualMachine(properties) {
+            if (properties)
+                for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                    if (properties[keys[i]] != null)
+                        this[keys[i]] = properties[keys[i]];
+        }
+
+        /**
+         * VirtualMachine id.
+         * @member {string} id
+         * @memberof vmapi.VirtualMachine
+         * @instance
+         */
+        VirtualMachine.prototype.id = "";
+
+        /**
+         * VirtualMachine name.
+         * @member {string} name
+         * @memberof vmapi.VirtualMachine
+         * @instance
+         */
+        VirtualMachine.prototype.name = "";
+
+        /**
+         * VirtualMachine cpu.
+         * @member {number} cpu
+         * @memberof vmapi.VirtualMachine
+         * @instance
+         */
+        VirtualMachine.prototype.cpu = 0;
+
+        /**
+         * VirtualMachine ram.
+         * @member {number} ram
+         * @memberof vmapi.VirtualMachine
+         * @instance
+         */
+        VirtualMachine.prototype.ram = 0;
+
+        /**
+         * Verifies a VirtualMachine message.
+         * @function verify
+         * @memberof vmapi.VirtualMachine
+         * @static
+         * @param {Object.<string,*>} message Plain object to verify
+         * @returns {string|null} `null` if valid, otherwise the reason why it is not
+         */
+        VirtualMachine.verify = function verify(message) {
+            if (typeof message !== "object" || message === null)
+                return "object expected";
+            if (message.id != null && message.hasOwnProperty("id"))
+                if (!$util.isString(message.id))
+                    return "id: string expected";
+            if (message.name != null && message.hasOwnProperty("name"))
+                if (!$util.isString(message.name))
+                    return "name: string expected";
+            if (message.cpu != null && message.hasOwnProperty("cpu"))
+                if (!$util.isInteger(message.cpu))
+                    return "cpu: integer expected";
+            if (message.ram != null && message.hasOwnProperty("ram"))
+                if (!$util.isInteger(message.ram))
+                    return "ram: integer expected";
+            return null;
+        };
+
+        /**
+         * Creates a VirtualMachine message from a plain object. Also converts values to their respective internal types.
+         * @function fromObject
+         * @memberof vmapi.VirtualMachine
+         * @static
+         * @param {Object.<string,*>} object Plain object
+         * @returns {vmapi.VirtualMachine} VirtualMachine
+         */
+        VirtualMachine.fromObject = function fromObject(object) {
+            if (object instanceof $root.vmapi.VirtualMachine)
+                return object;
+            let message = new $root.vmapi.VirtualMachine();
+            if (object.id != null)
+                message.id = String(object.id);
+            if (object.name != null)
+                message.name = String(object.name);
+            if (object.cpu != null)
+                message.cpu = object.cpu | 0;
+            if (object.ram != null)
+                message.ram = object.ram | 0;
+            return message;
+        };
+
+        /**
+         * Creates a plain object from a VirtualMachine message. Also converts values to other types if specified.
+         * @function toObject
+         * @memberof vmapi.VirtualMachine
+         * @static
+         * @param {vmapi.VirtualMachine} message VirtualMachine
+         * @param {$protobuf.IConversionOptions} [options] Conversion options
+         * @returns {Object.<string,*>} Plain object
+         */
+        VirtualMachine.toObject = function toObject(message, options) {
+            if (!options)
+                options = {};
+            let object = {};
+            if (options.defaults) {
+                object.id = "";
+                object.name = "";
+                object.cpu = 0;
+                object.ram = 0;
+            }
+            if (message.id != null && message.hasOwnProperty("id"))
+                object.id = message.id;
+            if (message.name != null && message.hasOwnProperty("name"))
+                object.name = message.name;
+            if (message.cpu != null && message.hasOwnProperty("cpu"))
+                object.cpu = message.cpu;
+            if (message.ram != null && message.hasOwnProperty("ram"))
+                object.ram = message.ram;
+            return object;
+        };
+
+        /**
+         * Converts this VirtualMachine to JSON.
+         * @function toJSON
+         * @memberof vmapi.VirtualMachine
+         * @instance
+         * @returns {Object.<string,*>} JSON object
+         */
+        VirtualMachine.prototype.toJSON = function toJSON() {
+            return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+        };
+
+        return VirtualMachine;
+    })();
+
+    return vmapi;
+})();
+
 export { $root as default };

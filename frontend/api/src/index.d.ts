@@ -5130,3 +5130,316 @@ export namespace DanielYevelkin {
         }
     }
 }
+
+/** Namespace vmapi. */
+export namespace vmapi {
+
+    /** Represents a VirtualMachineService */
+    class VirtualMachineService extends $protobuf.rpc.Service {
+
+        /**
+         * Constructs a new VirtualMachineService service.
+         * @param rpcImpl RPC implementation
+         * @param [requestDelimited=false] Whether requests are length-delimited
+         * @param [responseDelimited=false] Whether responses are length-delimited
+         */
+        constructor(rpcImpl: $protobuf.RPCImpl, requestDelimited?: boolean, responseDelimited?: boolean);
+
+        /**
+         * Calls GetVMs.
+         * @param request GetVMsRequest message or plain object
+         * @param callback Node-style callback called with the error, if any, and GetVMsResponse
+         */
+        public getVMs(request: vmapi.IGetVMsRequest, callback: vmapi.VirtualMachineService.GetVMsCallback): void;
+
+        /**
+         * Calls GetVMs.
+         * @param request GetVMsRequest message or plain object
+         * @returns Promise
+         */
+        public getVMs(request: vmapi.IGetVMsRequest): Promise<vmapi.GetVMsResponse>;
+
+        /**
+         * Calls AddVM.
+         * @param request AddVMRequest message or plain object
+         * @param callback Node-style callback called with the error, if any, and AddVMResponse
+         */
+        public addVM(request: vmapi.IAddVMRequest, callback: vmapi.VirtualMachineService.AddVMCallback): void;
+
+        /**
+         * Calls AddVM.
+         * @param request AddVMRequest message or plain object
+         * @returns Promise
+         */
+        public addVM(request: vmapi.IAddVMRequest): Promise<vmapi.AddVMResponse>;
+    }
+
+    namespace VirtualMachineService {
+
+        /**
+         * Callback as used by {@link vmapi.VirtualMachineService#getVMs}.
+         * @param error Error, if any
+         * @param [response] GetVMsResponse
+         */
+        type GetVMsCallback = (error: (Error|null), response?: vmapi.GetVMsResponse) => void;
+
+        /**
+         * Callback as used by {@link vmapi.VirtualMachineService#addVM}.
+         * @param error Error, if any
+         * @param [response] AddVMResponse
+         */
+        type AddVMCallback = (error: (Error|null), response?: vmapi.AddVMResponse) => void;
+    }
+
+    /** Properties of a GetVMsRequest. */
+    interface IGetVMsRequest {
+    }
+
+    /** Represents a GetVMsRequest. */
+    class GetVMsRequest implements IGetVMsRequest {
+
+        /**
+         * Constructs a new GetVMsRequest.
+         * @param [properties] Properties to set
+         */
+        constructor(properties?: vmapi.IGetVMsRequest);
+
+        /**
+         * Verifies a GetVMsRequest message.
+         * @param message Plain object to verify
+         * @returns `null` if valid, otherwise the reason why it is not
+         */
+        public static verify(message: { [k: string]: any }): (string|null);
+
+        /**
+         * Creates a GetVMsRequest message from a plain object. Also converts values to their respective internal types.
+         * @param object Plain object
+         * @returns GetVMsRequest
+         */
+        public static fromObject(object: { [k: string]: any }): vmapi.GetVMsRequest;
+
+        /**
+         * Creates a plain object from a GetVMsRequest message. Also converts values to other types if specified.
+         * @param message GetVMsRequest
+         * @param [options] Conversion options
+         * @returns Plain object
+         */
+        public static toObject(message: vmapi.GetVMsRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+        /**
+         * Converts this GetVMsRequest to JSON.
+         * @returns JSON object
+         */
+        public toJSON(): { [k: string]: any };
+    }
+
+    /** Properties of a GetVMsResponse. */
+    interface IGetVMsResponse {
+
+        /** GetVMsResponse vms */
+        vms?: (vmapi.IVirtualMachine[]|null);
+    }
+
+    /** Represents a GetVMsResponse. */
+    class GetVMsResponse implements IGetVMsResponse {
+
+        /**
+         * Constructs a new GetVMsResponse.
+         * @param [properties] Properties to set
+         */
+        constructor(properties?: vmapi.IGetVMsResponse);
+
+        /** GetVMsResponse vms. */
+        public vms: vmapi.IVirtualMachine[];
+
+        /**
+         * Verifies a GetVMsResponse message.
+         * @param message Plain object to verify
+         * @returns `null` if valid, otherwise the reason why it is not
+         */
+        public static verify(message: { [k: string]: any }): (string|null);
+
+        /**
+         * Creates a GetVMsResponse message from a plain object. Also converts values to their respective internal types.
+         * @param object Plain object
+         * @returns GetVMsResponse
+         */
+        public static fromObject(object: { [k: string]: any }): vmapi.GetVMsResponse;
+
+        /**
+         * Creates a plain object from a GetVMsResponse message. Also converts values to other types if specified.
+         * @param message GetVMsResponse
+         * @param [options] Conversion options
+         * @returns Plain object
+         */
+        public static toObject(message: vmapi.GetVMsResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+        /**
+         * Converts this GetVMsResponse to JSON.
+         * @returns JSON object
+         */
+        public toJSON(): { [k: string]: any };
+    }
+
+    /** Properties of an AddVMRequest. */
+    interface IAddVMRequest {
+
+        /** AddVMRequest vm */
+        vm?: (vmapi.IVirtualMachine|null);
+    }
+
+    /** Represents an AddVMRequest. */
+    class AddVMRequest implements IAddVMRequest {
+
+        /**
+         * Constructs a new AddVMRequest.
+         * @param [properties] Properties to set
+         */
+        constructor(properties?: vmapi.IAddVMRequest);
+
+        /** AddVMRequest vm. */
+        public vm?: (vmapi.IVirtualMachine|null);
+
+        /**
+         * Verifies an AddVMRequest message.
+         * @param message Plain object to verify
+         * @returns `null` if valid, otherwise the reason why it is not
+         */
+        public static verify(message: { [k: string]: any }): (string|null);
+
+        /**
+         * Creates an AddVMRequest message from a plain object. Also converts values to their respective internal types.
+         * @param object Plain object
+         * @returns AddVMRequest
+         */
+        public static fromObject(object: { [k: string]: any }): vmapi.AddVMRequest;
+
+        /**
+         * Creates a plain object from an AddVMRequest message. Also converts values to other types if specified.
+         * @param message AddVMRequest
+         * @param [options] Conversion options
+         * @returns Plain object
+         */
+        public static toObject(message: vmapi.AddVMRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+        /**
+         * Converts this AddVMRequest to JSON.
+         * @returns JSON object
+         */
+        public toJSON(): { [k: string]: any };
+    }
+
+    /** Properties of an AddVMResponse. */
+    interface IAddVMResponse {
+
+        /** AddVMResponse vm */
+        vm?: (vmapi.IVirtualMachine|null);
+    }
+
+    /** Represents an AddVMResponse. */
+    class AddVMResponse implements IAddVMResponse {
+
+        /**
+         * Constructs a new AddVMResponse.
+         * @param [properties] Properties to set
+         */
+        constructor(properties?: vmapi.IAddVMResponse);
+
+        /** AddVMResponse vm. */
+        public vm?: (vmapi.IVirtualMachine|null);
+
+        /**
+         * Verifies an AddVMResponse message.
+         * @param message Plain object to verify
+         * @returns `null` if valid, otherwise the reason why it is not
+         */
+        public static verify(message: { [k: string]: any }): (string|null);
+
+        /**
+         * Creates an AddVMResponse message from a plain object. Also converts values to their respective internal types.
+         * @param object Plain object
+         * @returns AddVMResponse
+         */
+        public static fromObject(object: { [k: string]: any }): vmapi.AddVMResponse;
+
+        /**
+         * Creates a plain object from an AddVMResponse message. Also converts values to other types if specified.
+         * @param message AddVMResponse
+         * @param [options] Conversion options
+         * @returns Plain object
+         */
+        public static toObject(message: vmapi.AddVMResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+        /**
+         * Converts this AddVMResponse to JSON.
+         * @returns JSON object
+         */
+        public toJSON(): { [k: string]: any };
+    }
+
+    /** Properties of a VirtualMachine. */
+    interface IVirtualMachine {
+
+        /** VirtualMachine id */
+        id?: (string|null);
+
+        /** VirtualMachine name */
+        name?: (string|null);
+
+        /** VirtualMachine cpu */
+        cpu?: (number|null);
+
+        /** VirtualMachine ram */
+        ram?: (number|null);
+    }
+
+    /** Represents a VirtualMachine. */
+    class VirtualMachine implements IVirtualMachine {
+
+        /**
+         * Constructs a new VirtualMachine.
+         * @param [properties] Properties to set
+         */
+        constructor(properties?: vmapi.IVirtualMachine);
+
+        /** VirtualMachine id. */
+        public id: string;
+
+        /** VirtualMachine name. */
+        public name: string;
+
+        /** VirtualMachine cpu. */
+        public cpu: number;
+
+        /** VirtualMachine ram. */
+        public ram: number;
+
+        /**
+         * Verifies a VirtualMachine message.
+         * @param message Plain object to verify
+         * @returns `null` if valid, otherwise the reason why it is not
+         */
+        public static verify(message: { [k: string]: any }): (string|null);
+
+        /**
+         * Creates a VirtualMachine message from a plain object. Also converts values to their respective internal types.
+         * @param object Plain object
+         * @returns VirtualMachine
+         */
+        public static fromObject(object: { [k: string]: any }): vmapi.VirtualMachine;
+
+        /**
+         * Creates a plain object from a VirtualMachine message. Also converts values to other types if specified.
+         * @param message VirtualMachine
+         * @param [options] Conversion options
+         * @returns Plain object
+         */
+        public static toObject(message: vmapi.VirtualMachine, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+        /**
+         * Converts this VirtualMachine to JSON.
+         * @returns JSON object
+         */
+        public toJSON(): { [k: string]: any };
+    }
+}
